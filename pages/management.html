@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Management Panel | Recipe Book & Meal Planner</title>
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/management.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="admin.html">
+        <img src="../images/logo.png" alt="Recipe Book & Meal Planner logo">
+        <span>Recipe Book & Meal Planner</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link" href="admin.html">Dashboard</a>
+        <a class="nav-link active" href="management.html">Management</a>
+      </div>
+
+      <div class="account-area">
+        <span class="admin-name">Admin</span>
+        <span class="account-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"></path></svg>
+        </span>
+        <a class="logout-button" href="../index.html">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrap management-wrap">
+    <div class="page-heading management-heading">
+      <div>
+        <h1>Management Panel</h1>
+        <p>Manage users, review account requests, and moderate recipes.</p>
+      </div>
+    </div>
+
+    <div class="panel management-panel" id="userManagement">
+      <div class="panel-heading"><h2>User Management</h2></div>
+      <div class="filter-row">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+          <input id="userSearch" type="text" placeholder="Search users by name or email..." aria-label="Search users by name or email">
+        </div>
+        <select id="roleFilter" aria-label="Filter users by role">
+          <option value="All Roles">All Roles</option>
+          <option value="Family User">Family User</option>
+          <option value="Student">Student</option>
+          <option value="Health-Conscious User">Health-Conscious User</option>
+          <option value="Home Cooking Enthusiast">Home Cooking Enthusiast</option>
+        </select>
+        <select id="statusFilter" aria-label="Filter users by status">
+          <option value="All Status">All Status</option>
+          <option value="Active">Active</option>
+          <option value="Suspended">Suspended</option>
+        </select>
+      </div>
+
+      <div class="table-wrap">
+        <table class="management-table user-table">
+          <thead>
+            <tr><th class="user-name-col">User Name</th><th class="user-email-col">Email</th><th class="user-role-col">Role</th><th class="user-status-col">Status</th><th class="user-action-col">Action</th></tr>
+          </thead>
+          <tbody>
+            <tr class="user-row"><td>John Smith</td><td>john@gmail.com</td><td>Family User</td><td><span class="status active-status">Active</span></td><td><button class="action-button suspend-button user-action" type="button">Suspend</button><button class="action-button delete-button user-action" type="button">Delete</button></td></tr>
+            <tr class="user-row"><td>Sarah Ahmed</td><td>sarah@gmail.com</td><td>Student</td><td><span class="status active-status">Active</span></td><td><button class="action-button suspend-button user-action" type="button">Suspend</button><button class="action-button delete-button user-action" type="button">Delete</button></td></tr>
+            <tr class="user-row"><td>David Lee</td><td>david@gmail.com</td><td>Health-Conscious User</td><td><span class="status suspended-status">Suspended</span></td><td><button class="action-button activate-button user-action" type="button">Activate</button><button class="action-button delete-button user-action" type="button">Delete</button></td></tr>
+            <tr class="user-row"><td>Maria Khan</td><td>maria@gmail.com</td><td>Home Cooking Enthusiast</td><td><span class="status active-status">Active</span></td><td><button class="action-button suspend-button user-action" type="button">Suspend</button><button class="action-button delete-button user-action" type="button">Delete</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel management-panel" id="accountApprovals">
+      <div class="panel-heading"><h2>Pending Account Approvals</h2></div>
+      <div class="request-list">
+        <div class="request-row"><span>Alex Brown</span><span>alex@gmail.com</span><span>Student</span><div class="request-actions"><button class="action-button approve-button approval-action" type="button">Approve</button><button class="action-button delete-button approval-action" type="button">Reject</button></div></div>
+        <div class="request-row"><span>Emily Wilson</span><span>emily@gmail.com</span><span>Family User</span><div class="request-actions"><button class="action-button approve-button approval-action" type="button">Approve</button><button class="action-button delete-button approval-action" type="button">Reject</button></div></div>
+      </div>
+    </div>
+
+    <div class="panel management-panel recipe-panel" id="recipeModeration">
+      <div class="panel-heading"><h2>Recipe Moderation</h2></div>
+      <div class="table-wrap">
+        <table class="management-table recipe-table">
+          <thead>
+            <tr><th class="recipe-name-col">Recipe Name</th><th class="recipe-author-col">Submitted By</th><th class="recipe-category-col">Category</th><th class="recipe-action-col">Action</th></tr>
+          </thead>
+          <tbody>
+            <tr class="recipe-row"><td>Chicken Pasta</td><td>Sarah Ahmed</td><td>Lunch</td><td><button class="action-button view-button recipe-action" type="button">View</button><button class="action-button delete-button recipe-action" type="button">Remove</button></td></tr>
+            <tr class="recipe-row"><td>Vegetable Soup</td><td>John Smith</td><td>Dinner</td><td><button class="action-button view-button recipe-action" type="button">View</button><button class="action-button delete-button recipe-action" type="button">Remove</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="../js/management.js"></script>
+</body>
+</html>
