@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard | Recipe Book & Meal Planner</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="admin.html">
+        <img src="../images/logo.png" alt="Recipe Book & Meal Planner logo">
+        <span>Recipe Book & Meal Planner</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link active" href="admin.html">Dashboard</a>
+        <a class="nav-link" href="management.html">Management</a>
+      </div>
+
+      <div class="account-area">
+        <span class="admin-name">Admin</span>
+        <span class="account-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"></path>
+          </svg>
+        </span>
+        <a class="logout-button" href="../index.html">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrap" id="dashboard">
+    <div class="page-heading">
+      <div>
+        <h1>Admin Dashboard</h1>
+        <p>Manage users, recipes, and platform activities.</p>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="9" cy="8" r="4"></circle>
+            <path d="M1 21c0-4 3-7 8-7s8 3 8 7z"></path>
+            <circle cx="18" cy="8" r="3"></circle>
+            <path d="M17 15c3 0 6 2 6 6h-4"></path>
+          </svg>
+        </div>
+        <div>
+          <h2>Total Users</h2>
+          <p class="stat-number">120</p>
+          <p class="stat-note">Registered accounts</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 4h7a3 3 0 0 1 3 3v14a3 3 0 0 0-3-3H3z"></path>
+            <path d="M21 4h-7a3 3 0 0 0-3 3v14a3 3 0 0 1 3-3h7z"></path>
+            <path d="M16 8h2"></path>
+          </svg>
+        </div>
+        <div>
+          <h2>Total Recipes</h2>
+          <p class="stat-number">85</p>
+          <p class="stat-note">Available recipes</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 6v6l4 3"></path>
+          </svg>
+        </div>
+        <div>
+          <h2>Pending Approvals</h2>
+          <p class="stat-number">02</p>
+          <p class="stat-note">Waiting for review</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="m4 12 5 5L20 6"></path>
+          </svg>
+        </div>
+        <div>
+          <h2>Active Users</h2>
+          <p class="stat-number">96</p>
+          <p class="stat-note">Currently active accounts</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="overview-grid">
+      <div class="panel" id="recentUsers">
+        <div class="panel-heading">
+          <h2>Recent Users</h2>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>User Name</th>
+              <th>Role</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <td>John Smith</td>
+              <td>Family User</td>
+              <td><span class="status active-status">Active</span></td>
+            </tr>
+            <tr>
+              <td>Sarah Ahmed</td>
+              <td>Student</td>
+              <td><span class="status active-status">Active</span></td>
+            </tr>
+            <tr>
+              <td>David Lee</td>
+              <td>Health-Conscious User</td>
+              <td><span class="status suspended-status">Suspended</span></td>
+            </tr>
+            <tr>
+              <td>Maria Khan</td>
+              <td>Home Cooking Enthusiast</td>
+              <td><span class="status active-status">Active</span></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="panel-footer">
+          <a class="text-link" href="management.html">
+            View All Users
+          </a>
+        </div>
+      </div>
+
+      <div class="panel approval-panel" id="pendingApprovals">
+        <div class="panel-heading">
+          <h2>Pending Account Approvals</h2>
+        </div>
+
+        <div class="approval-list">
+          <div class="approval-row">
+            <span>Alex Brown - Student</span>
+            <a class="review-button" href="management.html">Review</a>
+          </div>
+
+          <div class="approval-row">
+            <span>Emily Wilson - Family User</span>
+            <a class="review-button" href="management.html">Review</a>
+          </div>
+        </div>
+
+        <div class="panel-footer">
+          <a class="text-link" href="management.htmls">
+            View All Requests 
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel quick-panel">
+      <div class="panel-heading">
+        <h2>Quick Management Access</h2>
+      </div>
+
+      <div class="quick-grid">
+        <a class="quick-card" href="management.html">
+          <span class="quick-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="9" cy="8" r="4"></circle>
+              <path d="M1 21c0-4 3-7 8-7s8 3 8 7z"></path>
+              <circle cx="18" cy="8" r="3"></circle>
+              <path d="M17 15c3 0 6 2 6 6h-4"></path>
+            </svg>
+          </span>
+          <span>
+            <strong>Manage Users</strong>
+            <small>View, edit, suspend or delete accounts.</small>
+          </span>
+        </a>
+
+        <a class="quick-card" href="management.html">
+          <span class="quick-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 4h7a3 3 0 0 1 3 3v14a3 3 0 0 0-3-3H3z"></path>
+              <path d="M21 4h-7a3 3 0 0 0-3 3v14a3 3 0 0 1 3-3h7z"></path>
+              <path d="M16 8h2"></path>
+            </svg>
+          </span>
+          <span>
+            <strong>Moderate Recipes</strong>
+            <small>Review, hide or remove shared recipes.</small>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
