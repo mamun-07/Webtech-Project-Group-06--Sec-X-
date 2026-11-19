@@ -1,0 +1,18 @@
+body{
+    margin:0px;
+    padding: 0px;
+}
+img{
+    width: 60px;
+    margin-left:20px;
+    margin-top:5px;
+
+}
+.naviBar
+{
+    background-color: rgb(247, 247, 247);
+}
+.rbmp
+{
+    margin-top:100px;
+}
