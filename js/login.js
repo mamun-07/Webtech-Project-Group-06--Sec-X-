@@ -10,10 +10,10 @@ var USERS = {
     page: "pages/cook.html"
   },
   health: {
-    password: "health123",
-    role: "health",
-    page: "pages/health.html"
-  },
+  password: "health123",
+  role: "health",
+  page: "pages/health-dashboard.html"  
+},
   student: {
     password: "student123",
     role: "student",
