@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="../css/studentShoppingList.css">
+</head>
+<body>
+    <div class = "naviBar">
+        <img src="../images/studentLogo.jpeg"/>
+        <span class = "rbmp">Recipe Book & Meal Planner</span>
+        <span class="divider"></span>
+        <span class = "meal"><a href="studentMealPlanner.html">Meal Planner</a></span>
+        <span class = "shoppinglist"><a href="studentShoppingList.html">Shopping List</a></span>
+        <span class = "sname"> Student </span>
+        <span class="divider1"></span>
+        <span class ="btn-logout"><a href="#">Logout</a></span>   
+    </div>
+    <div class = "headAndP">
+        <h1>My Shopping List</h1>
+        <p>Manage your ingredients and keep track of your grocery items.</p>
+        <p class = "remain">8 items remaining</p>
+    </div>
+    <div>
+        <div class = "addnew">Add New Ingredient</div>
+        <div class = "addbtm">
+            <input type = "text" class = "src" id = "src" placeholder="Enter ingredient name...">
+            <input type = "number" class = "srcn" id = "srcn" placeholder="Quantity">
+            <select class = "dropdownbox">
+                <option value = "">kg, g, litre, ml, pieces</option>
+                <option value = "kg">Kg</option>
+                <option value = "g">g</option>
+                <option value = "litre">litre</option>
+                <option value = "ml">ml</option>
+                <option value = "pieces">pieces</option>
+            </select>
+            <button class = "additem-btn">Add Item</button>
+        </div>
+    </div>
+    <div class = "shoppinghead">Shopping Checklist</div>
+    <div>
+        <table class = "shoppingtable">
+            <tr>
+                <td class="item">
+                    <input type="checkbox" class="rice" id="rice">Rice
+                </td>
+                <td class="quantity">2 kg</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <input type="checkbox" class="chicken" id="chicken">Chicken
+                </td>
+                <td class="quantity">500 g</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <input type="checkbox" class="eggs" id="eggs">Eggs
+                </td>
+                <td class="quantity">12 pieces</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <input type="checkbox" class="fish" id="fish">Fish
+                </td>
+                <td class="quantity">1 kg</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <input type="checkbox" class="potato" id="potato">Potato
+                </td>
+                <td class="quantity">1 kg</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <input type="checkbox" class="onion" id="onion">Onion
+                </td>
+                <td class="quantity">500 g</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <input type="checkbox" class="tomatoes" id="tomatoes">Tomatoes
+                </td>
+                <td class="quantity">500 g</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <input type="checkbox" class="milk" id="milk">Milk
+                </td>
+                <td class="quantity">1 litre</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <input type="checkbox" class="bread" id="bread">Bread
+                </td>
+                <td class="quantity">2 pieces</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <input type="checkbox" class="vegetables" id="vegetables">Vegetables
+                </td>
+                <td class="quantity">1 kg</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total Items: 10 | Purchased: 2 | Remaining: 8</td>
+            </tr>
+        </table>
+    </div>
+    <button class = "clearCom-btn" id = "clearCom-btn">Clear Completed</button>
+    <button class = "clearAll-btn" id = "clearAll-btn">Clear All</button>
+    <button class = "backToMeal-btn" id = "backToMeal-btn">Back to Meal Planner</button>
+</body>
+</html>
