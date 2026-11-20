@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Health Dashboard | Recipe Book & Meal Planner</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/health.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="health-dashboard.html">
+        <img src="../images/logo.png" alt="Recipe Book & Meal Planner logo">
+        <span>Recipe Book & Meal Planner</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link active" href="health-dashboard.html">Dashboard</a>
+        <a class="nav-link " href="health-goals.html">Health Goals</a>
+      </div>
+
+      <div class="account-area">
+        <span class="user-name" id="userName">health</span>
+        <span class="account-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"></path>
+          </svg>
+        </span>
+        <a class="logout-button" href="../index.html">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+    <div class="page-heading">
+      <h1>Your Nutrition Dashboard</h1>
+      <div class="today-date" id="today"></div>
+      <p>Track your daily nutrition and make healthier food choices.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h2>🔥 Calories</h2>
+        <p class="stat-number" id="calValue"></p>
+        <div class="bar"><div class="bar-fill" id="calBar"></div></div>
+        <p class="stat-note" id="calLeft"></p>
+      </div>
+      <div class="stat-card">
+        <h2>💪 Protein</h2>
+        <p class="stat-number" id="proValue"></p>
+        <div class="bar"><div class="bar-fill" id="proBar"></div></div>
+        <p class="stat-note" id="proLeft"></p>
+      </div>
+      <div class="stat-card">
+        <h2>🌾 Carbs</h2>
+        <p class="stat-number" id="carValue"></p>
+        <div class="bar"><div class="bar-fill" id="carBar"></div></div>
+        <p class="stat-note" id="carLeft"></p>
+      </div>
+      <div class="stat-card">
+        <h2>💧 Fat</h2>
+        <p class="stat-number" id="fatValue"></p>
+        <div class="bar"><div class="bar-fill" id="fatBar"></div></div>
+        <p class="stat-note" id="fatLeft"></p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-heading"><h2>Today's Meals</h2></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Meal</th><th>Recipe</th><th>Calories</th><th>Protein (g)</th><th>Carbs (g)</th><th>Fat (g)</th>
+            </tr>
+          </thead>
+          <tbody id="mealBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-heading">
+        <h2>Recommended Healthy Recipes</h2>
+        <select id="dietFilter">
+          <option value="All">All Diets</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Low-Carb">Low-Carb</option>
+        </select>
+      </div>
+      <div class="panel-body recipe-grid" id="recipeGrid"></div>
+    </div>
+  </div>
+
+  <script src="../js/health-dashboard.js"></script>
+</body>
+</html>
