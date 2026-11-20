@@ -1,3 +1,26 @@
+<<<<<<<<< Temporary merge branch 1
+var USERS =
+{
+    admin:
+    {
+        password: "admin123", role: "admin", page: "pages/admin.html"
+    },
+
+    cook:
+    {
+        password: "cook123", role: "cook", page: "pages/cook.html"
+    },
+
+    health:
+    {
+        password: "health123", role: "health", page: "pages/health.html"
+    },
+
+    student:
+    {
+        password: "student123", role: "student", page: "pages/student.html"
+    }
+=========
 var USERS = {
   admin: { password: "admin123", role: "admin", page: "pages/admin.html"
   },
@@ -7,6 +30,7 @@ var USERS = {
 },
   student: { password: "student123", role: "student", page: "pages/student.html"
   }
+>>>>>>>>> Temporary merge branch 2
 };
 
 var loginForm = document.getElementById("loginForm");
