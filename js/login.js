@@ -22,25 +22,13 @@ var USERS =
     }
 =========
 var USERS = {
-  admin: {
-    password: "admin123",
-    role: "admin",
-    page: "pages/admin.html"
+  admin: { password: "admin123", role: "admin", page: "pages/admin.html"
   },
-  cook: {
-    password: "cook123",
-    role: "cook",
-    page: "pages/cook.html"
+  cook: { password: "cook123", role: "cook", page: "pages/cook.html"
   },
-  health: {
-  password: "health123",
-  role: "health",
-  page: "pages/health-dashboard.html"  
+  health: { password: "health123", role: "health", page: "pages/health-dashboard.html"  
 },
-  student: {
-    password: "student123",
-    role: "student",
-    page: "pages/student.html"
+  student: { password: "student123", role: "student", page: "pages/student.html"
   }
 >>>>>>>>> Temporary merge branch 2
 };
@@ -134,7 +122,6 @@ loginForm.addEventListener("submit", function (event)
         return;
     }
 
-    // Account check
     var user = USERS[username];
 
     if (!user || user.password !== password)
@@ -143,8 +130,6 @@ loginForm.addEventListener("submit", function (event)
         passwordInput.parentElement.classList.add("invalid");
         return;
     }
-
-    
 
     window.location.href = user.page;
 });
