@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
 var USERS =
 {
     admin:
@@ -20,7 +20,7 @@ var USERS =
     {
         password: "student123", role: "student", page: "pages/student.html"
     }
-=======
+=========
 var USERS = {
   admin: {
     password: "admin123",
@@ -42,7 +42,7 @@ var USERS = {
     role: "student",
     page: "pages/student.html"
   }
->>>>>>> testing
+>>>>>>>>> Temporary merge branch 2
 };
 
 var loginForm = document.getElementById("loginForm");
