@@ -1,0 +1,271 @@
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(244, 244, 240);
+    overflow: hidden;
+}
+img{
+    width: 60px;
+    margin-left:20px;
+    margin-top:5px;
+
+}
+.naviBar
+{
+    background-color: rgb(247, 247, 247);
+    border-bottom:black solid 0.1px;
+}
+.rbmp
+{
+    position:relative;
+    bottom: 25px;
+    left: 14px;
+    color: rgb(47, 107, 82);
+    font-weight: 600;
+}
+.divider {
+    display: inline-block;
+    width: 2px;
+    height: 40px;
+    background-color: rgb(47, 107, 82);
+    position:relative;
+    left: 30px;
+    bottom:10px
+}
+.meal
+{
+    position:relative;
+    left:50px;
+    bottom:26px;
+    padding: 8px;
+    border-radius: 10px;
+   
+}
+.meal a{
+    text-decoration: none;
+    color:black;
+    font-size:12px;
+    font-weight:bold;
+    
+
+}
+.shoppinglist
+{
+    position:relative;
+    left:58px;
+    bottom:26px;
+    background-color:rgb(47, 107, 82);
+    padding: 8px;
+    border-radius: 10px;
+    
+}
+.shoppinglist a{
+    text-decoration: none;
+    color:aliceblue;
+    font-size:12px;
+    font-weight:bold;
+
+}
+.sname{
+    color:rgb(47, 107, 82);
+    font-weight:bold;
+    font-size:12px;
+    position:relative;
+    left: 860px;
+    bottom: 26px;
+}
+.divider1 {
+    display: inline-block;
+    width: 2px;
+    height: 40px;
+    background-color: rgb(47, 107, 82);
+    position:relative;
+    left: 880px;
+    bottom:10px
+}
+.btn-logout{
+    position:relative;
+    left: 890px;
+    bottom:26px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color:rgb(233, 179, 44);
+    padding: 8px;
+    
+}
+.btn-logout a
+{
+    font-size:12px;
+    font-weight:bold;
+    text-decoration:none;
+    color:rgb(24, 42, 36);
+}
+.headAndP h1{
+    margin: 50px;
+    margin-top:15px;
+    color:rgb(28, 56, 46);
+    font-size: 36px;
+}
+.headAndP p
+{
+    color:rgb(75, 85, 99);
+    margin: 50px;
+    position:relative;
+    bottom:42px;
+}
+.headAndP .remain
+{
+    color:rgb(28, 56, 46);
+    margin: 50px;
+    position:relative;
+    bottom:80px;
+    font-weight:bold;
+}
+.addnew
+{
+    margin: 50px;
+    background-color:rgb(56, 102, 82);
+    padding:8px;
+    padding-left:16px;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    position:relative;
+    bottom:120px;
+    color:whitesmoke;
+    font-weight:bold;
+}
+.addbtm
+{
+    margin: 50px;
+    background-color:red;
+    width:1427px;
+    height:60px;
+    position:relative;
+    bottom:170px;
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
+    border:rgb(189, 189, 189) solid 1px;
+    background-color: rgb(247, 247, 247);
+}
+.src
+{
+    position:absolute;
+    left:12px;
+    top:13px;
+    width:450px;
+    height:30px;
+    border-radius:5px;
+    border:rgb(189, 189, 189) solid 1px;
+}
+::placeholder{
+    text-align:left;
+    font-size:15px;
+    position:absolute;
+    left:12px;
+}
+.srcn
+{
+    position:absolute;
+    left:480px;
+    top:13px;
+    width:310px;
+    height:30px;
+    border-radius:5px;
+    border:rgb(189, 189, 189) solid 1px;
+}
+.dropdownbox
+{
+    position:absolute;
+    left:810px;
+    top:13px;
+    width:310px;
+    height:34px;
+    border-radius:5px;
+}
+.dropdownbox
+{
+    color:rgb(32, 30, 30);
+}
+.additem-btn
+{
+    position:absolute;
+    left:1135px;
+    top:12px;
+    width:280px;
+    height: 34px;
+    border-radius:5px;
+    background-color:rgb(47, 107, 82);
+    color:white;
+}
+.shoppinghead
+{
+    margin: 50px;
+    background-color:rgb(47, 107, 82);
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    color:white;
+    font-weight:bold;
+    padding:10px;
+    padding-left:15px;
+    position:relative;
+    bottom:200px;
+}
+.shoppingtable
+{
+    border: 1px black solid;
+    margin: 50px;
+    position:relative;
+    bottom:250px;
+    padding-left:15px;
+    border-collapse: collapse;
+    width:1428px;
+    font-size:13px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.shoppingtable td
+{
+    border: 1px solid rgb(189, 189, 189);
+    padding: 3px;
+}
+.clearCom-btn
+{
+    position: relative;
+    bottom:270px;
+    left:50px;
+    width:200px;
+    height:5x;
+    padding:10px;
+    border-radius:5px;
+    border:rgb(47, 107, 82) 2px solid;
+    color:rgb(47, 107, 82);
+    font-weight:bold;
+}
+.clearAll-btn
+{
+    position: relative;
+    bottom:270px;
+    left:80px;
+    width:150px;
+    height:5x;
+    padding:10px;
+    border-radius:5px;
+    border:rgb(47, 107, 82) 2px solid;
+    color:rgb(47, 107, 82);
+    font-weight:bold;
+}
+.backToMeal-btn
+{
+    position: relative;
+    bottom:270px;
+    left:100px;
+    width:300px;
+    height:5x;
+    padding:10px;
+    border-radius:5px;
+    border:rgb(47, 107, 82) 2px solid;
+    color:white;
+    font-weight:bold;
+    background-color:rgb(47, 107, 82) ;
+}
