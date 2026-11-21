@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recipe Details | Recipe Book & Meal Planner</title>
+  <link rel="stylesheet" href="../css/recipes.css">
+</head>
+<body>
+
+  <!-- Top navigation bar (same as the recipes page) -->
+  <div class="topbar">
+    <a class="brand" href="recipes.html">
+      <img src="../images/logo.png" alt="Recipe Book & Meal Planner logo">
+      <span>Recipe Book &amp;<br>Meal Planner</span>
+    </a>
+
+    <div class="nav-links">
+      <a class="nav-link" href="recipes.html">🏠 Home</a>
+      <a class="nav-link" href="recipes.html">📖 My Recipes</a>
+      <a class="nav-link" href="recipes.html?show=favorites">💚 Favorites</a>
+    </div>
+
+    <div class="account-area">
+      <span class="user-name">👤 cook</span>
+      <a class="logout-button" href="../HomeIndex.html">Logout</a>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <p class="breadcrumb">
+      <a href="recipes.html">🏠 Home</a> /
+      <a href="recipes.html">My Recipes</a> /
+      <strong id="breadcrumbTitle">Recipe</strong>
+    </p>
+
+    <a class="back-btn" href="recipes.html">← Back to Recipes</a>
+
+    <h1 class="page-title" id="pageTitle">Recipe</h1>
+
+    <p class="not-found hidden" id="notFound">Sorry, this recipe was not found.</p>
+
+    <div id="recipeArea">
+
+      <!-- Top card: picture + short information -->
+      <div class="summary-card" id="summaryCard">
+        <div class="summary-image" id="summaryImage"></div>
+
+        <div class="summary-info">
+          <button type="button" class="heart big" id="heartBtn">♡</button>
+          <p class="description" id="description"></p>
+
+          <div class="facts">
+            <div class="fact">
+              <span class="fact-icon">🕒</span>
+              <div><small>Cooking Time</small><strong id="factTime"></strong></div>
+            </div>
+            <div class="fact">
+              <span class="fact-icon">📁</span>
+              <div><small>Category</small><strong id="factCategory"></strong></div>
+            </div>
+            <div class="fact">
+              <span class="fact-icon">🍴</span>
+              <div><small>Cuisine</small><strong id="factCuisine"></strong></div>
+            </div>
+            <div class="fact">
+              <span class="fact-icon">⭐</span>
+              <div><strong id="factRating"></strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs-box">
+        <div class="tab-buttons">
+          <button type="button" class="tab-btn active" id="tabDetailsBtn">📄 Recipe Details</button>
+          <button type="button" class="tab-btn" id="tabEditBtn">✏️ Edit Recipe</button>
+        </div>
+
+        <!-- Tab 1: details -->
+        <div class="tab-content" id="detailsTab">
+          <div class="two-columns">
+
+            <div class="ingredients-side">
+              <h2>🧺 Ingredients</h2>
+
+              <div class="serving-row">
+                <span>Serving Size:</span>
+                <div class="serving-box">
+                  <button type="button" id="minusBtn">−</button>
+                  <span id="servingText">2 people</span>
+                  <button type="button" id="plusBtn">+</button>
+                </div>
+              </div>
+
+              <table class="ingredient-table">
+                <tbody id="ingredientBody"></tbody>
+              </table>
+            </div>
+
+            <div class="steps-side">
+              <h2>📋 Cooking Instructions</h2>
+              <div id="stepsList"></div>
+            </div>
+
+          </div>
+
+          <div class="action-row">
+            <button type="button" class="edit-action" id="editActionBtn">✏️ Edit Recipe</button>
+            <span class="action-divider"></span>
+            <button type="button" class="delete-action" id="deleteBtn">🗑 Delete Recipe</button>
+          </div>
+        </div>
+
+        <!-- Tab 2: edit form -->
+        <div class="tab-content hidden" id="editTab">
+          <h2 id="editHeading">Edit Recipe</h2>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="editTitle">Recipe Name</label>
+              <input type="text" id="editTitle">
+            </div>
+
+            <div class="form-field">
+              <label for="editTime">Cooking Time (minutes)</label>
+              <input type="number" id="editTime" min="1">
+            </div>
+
+            <div class="form-field">
+              <label for="editCategory">Category</label>
+              <select id="editCategory">
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Snacks">Snacks</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="editCuisine">Cuisine</label>
+              <input type="text" id="editCuisine">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="editDescription">Short Description</label>
+            <textarea id="editDescription" rows="2"></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="editIngredients">Ingredients (one per line: name, amount, unit)</label>
+            <textarea id="editIngredients" rows="7" placeholder="Pasta, 200, g&#10;Garlic, 2, cloves"></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="editSteps">Cooking Instructions (one step per line)</label>
+            <textarea id="editSteps" rows="6"></textarea>
+          </div>
+
+          <p class="form-error" id="formError"></p>
+
+          <div class="action-row">
+            <button type="button" class="edit-action" id="saveBtn">💾 Save Recipe</button>
+            <span class="action-divider"></span>
+            <button type="button" class="cancel-action" id="cancelBtn">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="../js/recipe-data.js"></script>
+  <script src="../js/recipe-detail.js"></script>
+</body>
+</html>

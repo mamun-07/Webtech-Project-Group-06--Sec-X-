@@ -7,7 +7,7 @@ var USERS = {
   cook: {
     password: "cook123",
     role: "cook",
-    page: "pages/cook.html"
+    page: "pages/recipes.html"
   },
   health: {
   password: "health123",
