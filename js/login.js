@@ -51,12 +51,6 @@ for (var i = 0; i < demoButtons.length; i++)
     });
 }
 
-document.getElementById("forgotLink").addEventListener("click", function (event)
-{
-    event.preventDefault();
-    alert("Password reset feature is not available yet.");
-});
-
 loginForm.addEventListener("submit", function (event)
 {
     event.preventDefault();
@@ -93,15 +87,6 @@ loginForm.addEventListener("submit", function (event)
         passwordBox.classList.add("invalid");
         return;
     }
-
-    if (remember.checked)
-    {
-        localStorage.setItem("rememberedUser", username);
-    }
-    else
-    {
-        localStorage.removeItem("rememberedUser");
-    }
-
+    
     window.location.href = user.page;
 });
