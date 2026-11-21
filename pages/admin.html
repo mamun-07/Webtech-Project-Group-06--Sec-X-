@@ -3,160 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin Dashboard | Recipe Book & Meal Planner</title>
+  <title>Admin Dashboard | Recipe Book &  Meal Planner</title>
   <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
   <div class="topbar">
-    <div class="topbarInner">
+    <div class="inner">
       <a class="brand" href="admin.html">
-        <img src="../images/logo.png" alt="Recipe Book & Meal Planner logo">
-        <span>Recipe Book & Meal Planner</span>
+        <img src="../images/logo.png" alt="Recipe Book &  Meal Planner logo">Recipe Book &  Meal Planner
       </a>
 
       <div class="links">
-        <a class="link active" href="admin.html">Dashboard</a>
-        <a class="link" href="management.html">Management</a>
+        <a class="selected" href="admin.html">Dashboard</a>
+        <a href="management.html">Management</a>
       </div>
 
-      <div class="accountArea">
-        <span class="adminName">Admin</span>
-        <span class="accountIcon">
-          <span class="iconEmoji">👤</span>
+      <div class="account">
+        <span class="name">Admin</span>
+        <span class="icon">
+          <span class="emoji">👤</span>
         </span>
-        <a class="logoutButton" href="../HomeIndex.html">Logout</a>
+        <a class="logout" href="../HomeIndex.html">Logout</a>
       </div>
     </div>
   </div>
 
-  <div class="pageWrap" id="dashboard">
-    <div class="pageHeading">
+  <div class="page" id="dashboard">
+    <div class="intro">
       <div>
         <h1>Admin Dashboard</h1>
         <p>Manage users, recipes, and platform activities.</p>
       </div>
     </div>
 
-    <div class="statsGrid">
-      <div class="statCard">
-        <div class="statIcon">
-          <span class="iconEmoji">👥</span>
+    <div class="stats">
+      <div class="stat">
+        <div class="symbol">
+          <span class="emoji">👥</span>
         </div>
         <div>
           <h2>Total Users</h2>
-          <p class="statNumber">120</p>
-          <p class="statNote">Registered accounts</p>
+          <p class="number">120</p>
+          <p class="note">Registered accounts</p>
         </div>
       </div>
 
-      <div class="statCard">
-        <div class="statIcon">
-          <span class="iconEmoji">📖</span>
+      <div class="stat">
+        <div class="symbol">
+          <span class="emoji">📖</span>
         </div>
         <div>
           <h2>Total Recipes</h2>
-          <p class="statNumber">85</p>
-          <p class="statNote">Available recipes</p>
+          <p class="number">85</p>
+          <p class="note">Available recipes</p>
         </div>
       </div>
 
-      <div class="statCard">
-        <div class="statIcon">
-          <span class="iconEmoji">⌛</span>
+      <div class="stat">
+        <div class="symbol">
+          <span class="emoji">⌛</span>
         </div>
         <div>
           <h2>Pending Approvals</h2>
-          <p class="statNumber">02</p>
-          <p class="statNote">Waiting for review</p>
+          <p class="number">02</p>
+          <p class="note">Waiting for review</p>
         </div>
       </div>
 
-      <div class="statCard">
-        <div class="statIcon">
-          <span class="iconEmoji">✓</span>
+      <div class="stat">
+        <div class="symbol">
+          <span class="emoji">✓</span>
         </div>
         <div>
           <h2>Active Users</h2>
-          <p class="statNumber">96</p>
-          <p class="statNote">Currently active accounts</p>
+          <p class="number">96</p>
+          <p class="note">Currently active accounts</p>
         </div>
       </div>
     </div>
 
-    <div class="overviewGrid">
-      <div class="panel" id="recentUsers">
-        <div class="panelHeading">
+    <div class="overview">
+      <div class="users" id="recentUsers">
+        <div class="heading">
           <h2>Recent Users</h2>
         </div>
 
-        <div class="tableWrap">
+        <div class="tablewrap">
           <table>
             <tr>
-              <th>User Name</th>
-              <th>Role</th>
-              <th>Status</th>
+              <th>User Name</th> <th>Role</th> <th>Status</th>
             </tr>
+
             <tr>
-              <td>Farabi</td>
-              <td>Student</td>
-              <td><span class="status activeStatus">Active</span></td>
+              <td>Farabi</td> <td>Student</td>  <td><span class="active">Active</span></td>
             </tr>
+
             <tr>
-              <td>Sara</td>
-              <td>Student</td>
-              <td><span class="status activeStatus">Active</span></td>
+              <td>Sara</td> <td>Student</td> <td><span class="active">Active</span></td>
             </tr>
+
             <tr>
-              <td>Moinul</td>
-              <td>Health-Conscious User</td>
-              <td><span class="status suspendedStatus">Suspended</span></td>
+              <td>Moinul</td>  <td>Health-Conscious User</td> <td><span class="suspended">Suspended</span></td>
             </tr>
+
             <tr>
-              <td>Arafat</td>
-              <td>Home Cooking Enthusiast</td>
-              <td><span class="status activeStatus">Active</span></td>
+              <td>Arafat</td> <td>Home Cooking Enthusiast</td> <td><span class="active">Active</span></td>
             </tr>
+
           </table>
         </div>
 
-        <div class="panelFooter">
-          <a class="textLink" href="management.html">View All Users</a>
+        <div class="footer">
+          <a class="more" href="management.html">View All Users</a>
         </div>
       </div>
 
-      <div class="panel approvalPanel" id="pendingApprovals">
-        <div class="panelHeading">
+      <div class="approvals" id="pendingApprovals">
+        <div class="heading">
           <h2>Pending Account Approvals</h2>
         </div>
 
-        <div class="approvalList">
-          <div class="approvalRow">
-            <span>Jadid - Student</span>
-            <a class="reviewButton" href="management.html">Review</a>
+        <div class="requests">
+          <div class="request">
+            Jadid - Student
+            <a class="review" href="management.html">Review</a>
           </div>
-          <div class="approvalRow">
-            <span>Nafisa - Cook</span>
-            <a class="reviewButton" href="management.html">Review</a>
+          <div class="request">
+            Nafisa - Cook
+            <a class="review" href="management.html">Review</a>
           </div>
         </div>
 
-        <div class="panelFooter">
-          <a class="textLink" id="viewAllRequests" href="management.html">
-            View All Requests
-          </a>
+        <div class="footer">
+          <a class="more" id="viewAllRequests" href="management.html"> View All Requests </a>
         </div>
       </div>
     </div>
 
-    <div class="panel quickPanel">
-      <div class="panelHeading">
+    <div class="quick">
+      <div class="heading">
         <h2>Quick Management Access</h2>
       </div>
 
-      <div class="quickGrid">
-        <a class="quickCard" href="management.html">
-          <span class="quickIcon">
-            <span class="iconEmoji">👥</span>
+      <div class="cards">
+        <a class="card" href="management.html">
+          <span class="symbol">
+            <span class="emoji">👥</span>
           </span>
           <span>
             <strong>Manage Users</strong>
@@ -164,9 +156,9 @@
           </span>
         </a>
 
-        <a class="quickCard" href="management.html">
-          <span class="quickIcon">
-            <span class="iconEmoji">📖</span>
+        <a class="card" href="management.html">
+          <span class="symbol">
+            <span class="emoji">📑</span>
           </span>
           <span>
             <strong>Moderate Recipes</strong>

@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   background: #fbfbf7;
@@ -9,48 +8,38 @@ body {
   font: 15px Arial, sans-serif;
   line-height: 1.45;
 }
-
 h1, h2, p {
   margin: 0;
 }
-
 a {
   color: #17251f;
   text-decoration: none;
 }
-
 button, input, select {
   font: 15px Arial, sans-serif;
   color: #17251f;
 }
-
 :focus-visible {
   outline: 3px solid #e5a514;
   outline-offset: 3px;
 }
-
 .topbar {
   background: #fff;
   border-bottom: 1px solid #d8ded9;
 }
-
-.topbarInner, .brand, .links, .accountArea,
-.panelHeading, .requestActions {
+.inner, .brand, .links, .account, .heading, .actions {
   display: flex;
   align-items: center;
 }
-
-.topbarInner, .pageWrap {
+.inner, .page {
   max-width: 1460px;
   margin: 0 auto;
 }
-
-.topbarInner {
+.inner {
   min-height: 70px;
   padding: 8px 24px;
   gap: 16px;
 }
-
 .brand {
   gap: 8px;
   color: #2f5d50;
@@ -58,33 +47,28 @@ button, input, select {
   font-weight: 700;
   white-space: nowrap;
 }
-
 .brand img {
   width: 46px;
   height: 46px;
   object-fit: contain;
 }
-
 .links {
   gap: 6px;
   padding-left: 14px;
   border-left: 2px solid #c8cfca;
 }
-
-.link {
+.links a {
   position: relative;
   padding: 8px 13px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
 }
-
-.link.active {
+.links .selected {
   background: #2f5d50;
   color: #fff;
 }
-
-.link.active::after {
+.links .selected::after {
   position: absolute;
   right: 5px;
   bottom: -7px;
@@ -94,21 +78,18 @@ button, input, select {
   background: #f6b72e;
   content: "";
 }
-
-.accountArea {
+.account {
   gap: 10px;
   margin-left: auto;
 }
-
-.adminName {
+.name {
   padding-right: 12px;
   border-right: 2px solid #c8cfca;
   color: #204a3b;
   font-size: 14px;
   font-weight: 700;
 }
-
-.accountIcon {
+.icon {
   display: grid;
   width: 34px;
   height: 34px;
@@ -116,87 +97,71 @@ button, input, select {
   border-radius: 50%;
   background: #2f5d50;
 }
-
-.iconEmoji {
+.emoji {
   font-size: 20px;
   line-height: 1;
   filter: grayscale(100%) brightness(0) invert(1);
 }
-
-.logoutButton {
+.logout {
   padding: 10px 14px;
   border-radius: 12px;
   background: #f6b72e;
   font-size: 14px;
   font-weight: 700;
 }
-
-.logoutButton:hover {
+.logout:hover {
   background: #e8a91c;
 }
-
-.pageWrap {
+.page {
   padding: 14px 24px 8px;
 }
-
-.pageHeading {
+.intro {
   margin: 0 4px 12px;
 }
-
-.pageHeading h1 {
+.intro h1 {
   margin-bottom: 4px;
   color: #14271f;
   font-size: 40px;
 }
-
-.pageHeading p {
+.intro p {
   color: #283638;
   font-size: 17px;
 }
-
-.panel {
+.users, .approvals, .recipes {
   overflow: hidden;
   margin-bottom: 12px;
   border: 1px solid #e0e4e1;
   border-radius: 14px;
   background: #fff;
-  box-shadow: 0 1px 3px rgba(20, 39, 31, .06);
 }
-
-.recipePanel {
+.recipes {
   margin-bottom: 0;
 }
-
-.panelHeading {
+.heading {
   min-height: 38px;
   padding: 6px 14px;
   background: #356c58;
   color: #fff;
 }
-
-.panelHeading h2 {
+.heading h2 {
   font-size: 17px;
 }
-
-.filterRow {
+.filters {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
   gap: 12px;
   padding: 8px 12px;
 }
-
-.searchBox {
+.search {
   position: relative;
 }
-
-.searchIcon {
+.glass {
   position: absolute;
   top: 9px;
   left: 12px;
   font-size: 16px;
 }
-
-.filterRow input, .filterRow select {
+.filters input, .filters select {
   width: 100%;
   height: 36px;
   padding: 0 12px;
@@ -205,58 +170,48 @@ button, input, select {
   background: #fff;
   font-size: 14px;
 }
-
-.filterRow input {
+.filters input {
   padding-left: 38px;
 }
-
-.tableWrap {
+.tablewrap {
   overflow-x: auto;
 }
-
-.managementTable {
+.table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
   text-align: left;
 }
-
-.managementTable th, .managementTable td {
+.table th, .table td {
   padding: 5px 10px;
   border: 1px solid #e1e5e7;
   font-size: 14px;
 }
-
-.managementTable th {
+.table th {
   background: #f7f8f7;
 }
-
-.managementTable th:last-child,
-.managementTable td:last-child {
+.table th:last-child,
+.table td:last-child {
   width: 210px;
   text-align: right;
   white-space: nowrap;
 }
-
-.status {
+.active, .suspended {
   display: inline-block;
   padding: 3px 10px;
   border-radius: 20px;
   font-size: 14px;
   font-weight: 700;
 }
-
-.activeStatus {
+.active {
   background: #d7f5dc;
   color: #155f31;
 }
-
-.suspendedStatus {
+.suspended {
   background: #fce0de;
   color: #a52c22;
 }
-
-.actionButton {
+.users button, .approvals button, .recipes button {
   min-width: 86px;
   min-height: 30px;
   margin-right: 6px;
@@ -267,37 +222,32 @@ button, input, select {
   font-weight: 700;
   cursor: pointer;
 }
-
-.actionButton:last-child {
+.users button:last-child,
+.approvals button:last-child,
+.recipes button:last-child {
   margin-right: 0;
 }
-
-.suspendButton {
+.suspend {
   background: #f6b72e;
 }
-
-.activateButton, .approveButton {
+.activate, .approve {
   background: #356c58;
   color: #fff;
 }
-
-.deleteButton {
+.users .delete, .approvals .reject, .recipes .remove {
   border-color: #e4473f;
   background: #fff;
   color: #d52f27;
 }
-
-.viewButton {
+.recipes .view {
   border-color: #6b9b86;
   background: #fff;
   color: #356c58;
 }
-
-.requestList {
+.requests {
   padding: 0 12px;
 }
-
-.requestRow {
+.request {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1.5fr 210px;
   align-items: center;
@@ -307,21 +257,17 @@ button, input, select {
   border-bottom: 1px solid #e2e6e4;
   font-size: 14px;
 }
-
-.requestRow:last-child {
+.request:last-child {
   border-bottom: 0;
 }
-
-.requestActions {
+.actions {
   justify-content: flex-end;
   gap: 6px;
 }
-
-.requestActions .actionButton {
+.actions button {
   min-width: 86px;
   margin: 0;
 }
-
 .toast {
   display: none;
   position: fixed;
