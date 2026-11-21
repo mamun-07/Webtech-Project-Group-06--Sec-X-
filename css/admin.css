@@ -1,50 +1,34 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   background: #fbfbf7;
   color: #17251f;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   line-height: 1.45;
 }
-
-button,
-a {
-  font: inherit;
-  color: inherit;
+button, a {
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #17251f;
 }
-
 a {
   text-decoration: none;
 }
-
 :focus-visible {
   outline: 3px solid #e5a514;
   outline-offset: 3px;
 }
-
 .topbar {
   background: #fff;
   border-bottom: 1px solid #d8ded9;
 }
-
-.topbarInner,
-.brand,
-.links,
-.accountArea,
-.pageHeading,
-.todayDate,
-.statCard,
-.panelHeading,
-.panelFooter,
-.approvalRow,
-.quickCard {
+.inner, .brand, .links, .account, .intro, .stat, .heading, .footer, .request, .card {
   display: flex;
   align-items: center;
 }
-
 .brand {
   gap: 8px;
   min-width: 0;
@@ -53,32 +37,26 @@ a {
   font-weight: 700;
   white-space: nowrap;
 }
-
 .brand img {
   width: 46px;
   height: 46px;
   object-fit: contain;
 }
-
-.topbarInner,
-.pageWrap {
+.inner, .page {
   max-width: 1460px;
   margin: 0 auto;
 }
-
-.topbarInner {
+.inner {
   min-height: 70px;
   padding: 8px 24px;
   gap: 16px;
 }
-
 .links {
   gap: 6px;
   padding-left: 14px;
   border-left: 2px solid #c8cfca;
 }
-
-.link {
+.links a {
   position: relative;
   min-height: 38px;
   padding: 8px 13px;
@@ -90,13 +68,11 @@ a {
   white-space: nowrap;
   cursor: pointer;
 }
-
-.link.active {
+.links .selected {
   background: #2f5d50;
   color: #fff;
 }
-
-.link.active::after {
+.links .selected::after {
   position: absolute;
   right: 5px;
   bottom: -7px;
@@ -106,41 +82,28 @@ a {
   background: #f6b72e;
   content: "";
 }
-
-.accountArea {
+.account {
   gap: 10px;
   margin-left: auto;
 }
-
-.adminName {
+.name {
   padding-right: 12px;
   border-right: 2px solid #c8cfca;
   color: #204a3b;
   font-size: 14px;
   font-weight: 700;
 }
-
-.accountIcon,
-.statIcon,
-.quickIcon {
+.icon, .symbol {
   display: grid;
   place-items: center;
 }
-
-.accountIcon {
+.icon {
   width: 34px;
   height: 34px;
   border-radius: 50%;
   background: #2f5d50;
 }
-
-.accountIcon svg {
-  width: 21px;
-  height: 21px;
-  fill: #fff;
-}
-
-.logoutButton {
+.logout {
   display: inline-flex;
   align-items: center;
   min-height: 38px;
@@ -150,201 +113,129 @@ a {
   font-size: 14px;
   font-weight: 700;
 }
-
-.logoutButton:hover {
+.logout:hover {
   background: #e8a91c;
 }
-
-.pageWrap {
+.page {
   padding: 16px 24px 20px;
 }
-
-.pageHeading {
+.intro {
   justify-content: space-between;
   gap: 14px;
   margin: 0 4px 16px;
 }
-
-.pageHeading h1 {
+.intro h1 {
   margin: 0 0 4px;
   color: #14271f;
   font-size: 40px;
   line-height: 1.1;
 }
-
-.pageHeading p {
+.intro p {
   margin: 0;
   color: #283638;
   font-size: 17px;
 }
-
-.todayDate {
-  gap: 8px;
-  color: #263238;
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-.todayDate svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: #17251f;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.statsGrid {
+.stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
   margin-bottom: 18px;
 }
-
-.statCard,
-.panel,
-.quickCard {
+.stat, .users, .approvals, .quick, .card {
   background: #fff;
 }
-
-.statCard,
-.panel {
+.stat, .users, .approvals, .quick {
   border-radius: 14px;
   box-shadow: 0 1px 3px rgba(20, 39, 31, 0.06);
 }
-
-.statCard {
+.stat {
   min-height: 96px;
   gap: 14px;
   padding: 12px;
   border: 1px solid #e2e5e3;
 }
-
-.statIcon,
-.quickIcon {
-  display: grid;
+.symbol {
   flex: 0 0 56px;
-  place-items: center;
   background: #2f6655;
 }
-
-.statIcon {
+.stat .symbol {
   height: 56px;
   border-radius: 18px;
 }
-
-.quickIcon {
+.card .symbol {
   height: 54px;
   flex-basis: 54px;
   border-radius: 17px;
 }
-
-.statIcon svg {
-  width: 31px;
-  height: 31px;
-  fill: none;
-  stroke: #fff;
-  stroke-width: 2.3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.quickIcon svg {
-  width: 30px;
-  height: 30px;
-  fill: none;
-  stroke: #fff;
-  stroke-width: 2.3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.iconEmoji {
+.emoji {
   display: inline-block;
   line-height: 1;
   filter: grayscale(100%) brightness(0) invert(1);
 }
-
-.accountIcon .iconEmoji {
+.icon .emoji {
   font-size: 20px;
 }
-
-.statIcon .iconEmoji {
+.stat .emoji {
   font-size: 31px;
 }
-
-.quickIcon .iconEmoji {
+.card .emoji {
   font-size: 28px;
 }
-
-.statCard h2 {
+.stat h2 {
   margin: 0 0 2px;
   font-size: 16px;
   line-height: 1.2;
 }
-
-.statNumber {
+.number {
   margin: 0;
   font-size: 28px;
   font-weight: 700;
   line-height: 1.1;
 }
-
-.statNote {
+.note {
   margin: 2px 0 0;
   color: #5b6470;
   font-size: 14px;
 }
-
-.overviewGrid {
+.overview {
   display: grid;
   grid-template-columns: 1.45fr 1fr;
   gap: 14px;
   margin-bottom: 18px;
 }
-
-.panel {
+.users, .approvals, .quick {
   overflow: hidden;
   border: 1px solid #e0e4e1;
 }
-
-.panelHeading {
+.heading {
   min-height: 38px;
   padding: 6px 14px;
   background: #356c58;
   color: #fff;
 }
-
-.panelHeading h2 {
+.heading h2 {
   margin: 0;
   font-size: 17px;
   line-height: 1.25;
 }
-
-.tableWrap {
+.tablewrap {
   overflow-x: auto;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
 }
-
-th,
-td {
+th, td {
   padding: 6px 10px;
   border: 1px solid #e1e5e7;
   font-size: 15px;
 }
-
 th {
   background: #f7f8f7;
   font-weight: 700;
 }
-
-.status {
+.active, .suspended {
   display: inline-block;
   padding: 3px 10px;
   border-radius: 20px;
@@ -352,24 +243,20 @@ th {
   font-weight: 700;
   white-space: nowrap;
 }
-
-.activeStatus {
+.active {
   background: #d7f5dc;
   color: #155f31;
 }
-
-.suspendedStatus {
+.suspended {
   background: #fce0de;
   color: #a52c22;
 }
-
-.panelFooter {
+.footer {
   min-height: 40px;
   padding: 4px 14px;
   border-top: 1px solid #e4e7e5;
 }
-
-.textLink {
+.more {
   display: inline-flex;
   align-items: center;
   min-height: 38px;
@@ -381,35 +268,25 @@ th {
   font-weight: 700;
   cursor: pointer;
 }
-
-.textLink span {
-  margin-left: 6px;
-  font-size: 21px;
-}
-
-.textLink:hover {
+.more:hover {
   text-decoration: underline;
 }
-
-.approvalPanel {
+.approvals {
   display: flex;
   flex-direction: column;
 }
-
-.approvalList {
+.requests {
   flex: 1;
   padding: 6px 12px;
 }
-
-.approvalRow {
+.request {
   min-height: 54px;
   justify-content: space-between;
   gap: 12px;
   border-bottom: 1px solid #e2e6e4;
   font-size: 15px;
 }
-
-.reviewButton {
+.review {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -425,29 +302,19 @@ th {
   text-decoration: none;
   cursor: pointer;
 }
-
-.reviewButton:hover {
+.review:hover {
   background: #285442;
 }
-
-.approvalPanel .panelFooter {
+.approvals .footer {
   margin-top: auto;
 }
-
-.quickPanel .panelHeading {
-  min-height: 38px;
-}
-
-.quickGrid {
+.cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   padding: 10px 12px 12px;
 }
-
-.quickCard {
-  display: flex;
-  align-items: center;
+.card {
   min-height: 82px;
   gap: 14px;
   padding: 12px;
@@ -456,25 +323,21 @@ th {
   text-align: left;
   cursor: pointer;
 }
-
-.quickCard:hover {
-  border-color: #83a293;
+.card:hover {
+  border-color: #80a191;
   background: #f9fbf9;
 }
-
-.quickCard strong {
+.card strong {
   display: block;
   margin-bottom: 3px;
   font-size: 17px;
 }
-
-.quickCard small {
+.card small {
   display: block;
   color: #58616b;
   font-size: 14px;
   line-height: 1.4;
 }
-
 .toast {
   display: none;
   position: fixed;
@@ -487,6 +350,5 @@ th {
   border-radius: 10px;
   background: #173d30;
   color: #fff;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
   font-size: 14px;
 }
