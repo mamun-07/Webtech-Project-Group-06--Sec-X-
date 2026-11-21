@@ -1,11 +1,3 @@
-var USERS = 
-{
-  admin: { password: "admin123", role: "admin", page: "pages/admin.html"},
-  cook: { password: "cook123", role: "cook", page: "pages/cook.html"},
-  health: { password: "health123", role: "health", page: "pages/health-dashboard.html"},
-  student: { password: "student123", role: "student", page: "pages/student.html"}
-}
-
 var loginForm = document.getElementById("loginForm");
 var usernameInput = document.getElementById("username");
 var passwordInput = document.getElementById("password");

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Recipes | Recipe Book & Meal Planner</title>
+  <link rel="stylesheet" href="../css/recipes.css">
+</head>
+<body>
+
+  <!-- Top navigation bar -->
+  <div class="topbar">
+    <a class="brand" href="recipes.html">
+      <img src="../images/logo.png" alt="Recipe Book & Meal Planner logo">
+      <span>Recipe Book &amp;<br>Meal Planner</span>
+    </a>
+
+    <div class="nav-links">
+      <a class="nav-link active" id="navHome" href="recipes.html">🏠 Home</a>
+      <a class="nav-link" href="recipes.html">📖 My Recipes</a>
+      <a class="nav-link" id="navFavorites" href="recipes.html?show=favorites">💚 Favorites</a>
+    </div>
+
+    <div class="account-area">
+      <span class="user-name">👤 cook</span>
+      <a class="logout-button" href="../HomeIndex.html">Logout</a>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- Welcome banner -->
+    <div class="welcome">
+      <div>
+        <h1>Welcome Back, Chef!</h1>
+        <p>Manage your recipes and discover your next favorite meal.</p>
+      </div>
+      <a class="add-button" href="recipe-detail.html?id=new">+ Add New Recipe</a>
+    </div>
+
+    <!-- Recipe box -->
+    <div class="recipe-box">
+      <h2>👨‍🍳 My Recipe Box</h2>
+
+      <div class="toolbar">
+        <input type="text" id="searchInput" placeholder="🔍  Search by recipe name or ingredient...">
+
+        <div class="filters">
+          <button type="button" class="filter-btn active" data-category="All">All Recipes</button>
+          <button type="button" class="filter-btn" data-category="Breakfast">Breakfast</button>
+          <button type="button" class="filter-btn" data-category="Lunch">Lunch</button>
+          <button type="button" class="filter-btn" data-category="Dinner">Dinner</button>
+          <button type="button" class="filter-btn" data-category="Snacks">Snacks</button>
+        </div>
+
+        <button type="button" class="favorites-btn" id="favoritesBtn">💚 Favorites</button>
+      </div>
+
+      <!-- The recipe cards are added here by recipes.js -->
+      <div class="recipe-grid" id="recipeGrid"></div>
+
+      <p class="no-results hidden" id="noResults">No recipes found. Try a different search.</p>
+    </div>
+
+  </div>
+
+  <script src="../js/recipe-data.js"></script>
+  <script src="../js/recipes.js"></script>
+</body>
+</html>
