@@ -269,3 +269,30 @@ img{
     font-weight:bold;
     background-color:rgb(47, 107, 82) ;
 }
+.error {
+    position: absolute;
+    top: 48px;
+    font-size: 11px;
+    color: red;
+}
+#nameError  
+{ 
+    left: 16px; 
+}
+#qtyError   
+{ 
+    left: 484px; 
+}
+#unitError
+{ 
+    left: 814px; 
+}
+
+.success {
+    position: absolute;
+    top: 47px;
+    left: 1138px;
+    font-size: 12px;
+    font-weight: bold;
+    color: green;
+}
