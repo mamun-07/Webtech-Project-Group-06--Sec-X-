@@ -285,3 +285,30 @@ img{
     font-size: 13px;
     font-weight: bold;
 }
+.green-btn:hover 
+{
+    background-color: rgb(34, 82, 62); 
+    cursor: pointer;
+}
+.yellow-btn:hover 
+{
+    background-color: rgb(214, 160, 30);
+    cursor: pointer;
+}
+.clear-outline:hover 
+{
+    background-color: rgb(225, 240, 232);
+    cursor: pointer;
+}
+.btnAdd:hover 
+{
+    background-color: rgb(34, 82, 62);
+    cursor: pointer;
+}
+.search:hover,
+.day1:hover,
+.mealtime1:hover 
+{
+    border-color: rgb(47, 107, 82);
+    cursor:pointer;
+}
