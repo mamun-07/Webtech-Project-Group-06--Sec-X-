@@ -5,7 +5,8 @@ var USERS =
     health: { password: "health123", role: "health", page: "pages/health-dashboard.html" },
     student: { password: "student123", role: "student", page: "pages/student.html" }
 };
-
+var usernameBox = document.getElementById("usernameBox");
+var passwordBox = document.getElementById("passwordBox");
 var loginForm = document.getElementById("loginForm");
 var usernameInput = document.getElementById("username");
 var passwordInput = document.getElementById("password");
@@ -20,16 +21,8 @@ function clearMessages()
     passwordError.textContent = "";
     notice.textContent = "";
     notice.hidden = true;
-    usernameInput.parentElement.classList.remove("invalid");
-    passwordInput.parentElement.classList.remove("invalid");
-}
-
-var savedUsername = localStorage.getItem("rememberedUser");
-
-if (savedUsername)
-{
-    usernameInput.value = savedUsername;
-    remember.checked = true;
+    usernameBox.classList.remove("invalid");
+    passwordBox.classList.remove("invalid");
 }
 
 document.getElementById("eye").addEventListener("click", function ()
@@ -76,14 +69,14 @@ loginForm.addEventListener("submit", function (event)
     if (username === "")
     {
         usernameError.textContent = "Enter your username.";
-        usernameInput.parentElement.classList.add("invalid");
+        usernameBox.classList.add("invalid");
         isValid = false;
     }
 
     if (password === "")
     {
         passwordError.textContent = "Enter your password.";
-        passwordInput.parentElement.classList.add("invalid");
+        passwordBox.classList.add("invalid");
         isValid = false;
     }
 
@@ -97,7 +90,7 @@ loginForm.addEventListener("submit", function (event)
     if (!user || user.password !== password)
     {
         passwordError.textContent = "Username or password is incorrect.";
-        passwordInput.parentElement.classList.add("invalid");
+        passwordBox.classList.add("invalid");
         return;
     }
 
