@@ -256,3 +256,12 @@ img{
     background-color: rgb(47, 107, 82);
     color:white;
 }
+.recipe-item {
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.recipe-item:hover
+{
+    background-color: rgb(225, 240, 232);
+}
