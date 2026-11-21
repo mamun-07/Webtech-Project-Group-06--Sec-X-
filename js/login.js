@@ -1,38 +1,12 @@
-<<<<<<<<< Temporary merge branch 1
 var USERS =
 {
-    admin:
-    {
-        password: "admin123", role: "admin", page: "pages/admin.html"
-    },
-
-    cook:
-    {
-        password: "cook123", role: "cook", page: "pages/cook.html"
-    },
-
-    health:
-    {
-        password: "health123", role: "health", page: "pages/health.html"
-    },
-
-    student:
-    {
-        password: "student123", role: "student", page: "pages/student.html"
-    }
-=========
-var USERS = {
-  admin: { password: "admin123", role: "admin", page: "pages/admin.html"
-  },
-  cook: { password: "cook123", role: "cook", page: "pages/cook.html"
-  },
-  health: { password: "health123", role: "health", page: "pages/health-dashboard.html"  
-},
-  student: { password: "student123", role: "student", page: "pages/student.html"
-  }
->>>>>>>>> Temporary merge branch 2
+    admin: { password: "admin123", role: "admin", page: "pages/admin.html" },
+    cook: { password: "cook123", role: "cook", page: "pages/recipes.html" },
+    health: { password: "health123", role: "health", page: "pages/health-dashboard.html" },
+    student: { password: "student123", role: "student", page: "pages/student.html" }
 };
-
+var usernameBox = document.getElementById("usernameBox");
+var passwordBox = document.getElementById("passwordBox");
 var loginForm = document.getElementById("loginForm");
 var usernameInput = document.getElementById("username");
 var passwordInput = document.getElementById("password");
@@ -47,18 +21,8 @@ function clearMessages()
     passwordError.textContent = "";
     notice.textContent = "";
     notice.hidden = true;
-
-    usernameInput.parentElement.classList.remove("invalid");
-    passwordInput.parentElement.classList.remove("invalid");
-}
-
-
-var Username = localStorage.getItem("rememberedUser");
-
-if (Username)
-{
-    usernameInput.value = Username;
-    remember.checked = true;
+    usernameBox.classList.remove("invalid");
+    passwordBox.classList.remove("invalid");
 }
 
 document.getElementById("eye").addEventListener("click", function ()
@@ -82,17 +46,10 @@ for (var i = 0; i < demoButtons.length; i++)
     demoButtons[i].addEventListener("click", function ()
     {
         clearMessages();
-
         usernameInput.value = this.getAttribute("data-user");
         passwordInput.value = this.getAttribute("data-pass");
     });
 }
-
-document.getElementById("forgotLink").addEventListener("click", function (event)
-{
-    event.preventDefault();
-    alert("Password reset feature is not available yet.");
-});
 
 loginForm.addEventListener("submit", function (event)
 {
@@ -106,14 +63,14 @@ loginForm.addEventListener("submit", function (event)
     if (username === "")
     {
         usernameError.textContent = "Enter your username.";
-        usernameInput.parentElement.classList.add("invalid");
+        usernameBox.classList.add("invalid");
         isValid = false;
     }
 
     if (password === "")
     {
         passwordError.textContent = "Enter your password.";
-        passwordInput.parentElement.classList.add("invalid");
+        passwordBox.classList.add("invalid");
         isValid = false;
     }
 
@@ -127,9 +84,9 @@ loginForm.addEventListener("submit", function (event)
     if (!user || user.password !== password)
     {
         passwordError.textContent = "Username or password is incorrect.";
-        passwordInput.parentElement.classList.add("invalid");
+        passwordBox.classList.add("invalid");
         return;
     }
-
+    
     window.location.href = user.page;
 });

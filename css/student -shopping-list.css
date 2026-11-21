@@ -197,6 +197,13 @@ img{
     border-radius:5px;
     background-color:rgb(47, 107, 82);
     color:white;
+    cursor: pointer;
+}
+.additem-btn:hover
+{
+    background-color: rgb(34, 82, 62);
+
+
 }
 .shoppinghead
 {
@@ -268,4 +275,52 @@ img{
     color:white;
     font-weight:bold;
     background-color:rgb(47, 107, 82) ;
+}
+.error {
+    position: absolute;
+    top: 48px;
+    font-size: 11px;
+    color: red;
+}
+#nameError  
+{ 
+    left: 16px; 
+}
+#qtyError   
+{ 
+    left: 484px; 
+}
+#unitError
+{ 
+    left: 814px; 
+}
+
+.success {
+    position: absolute;
+    top: 47px;
+    left: 1138px;
+    font-size: 12px;
+    font-weight: bold;
+    color: green;
+}
+.backToMeal-btn
+{
+    text-decoration:none;
+}
+.backToMeal-btn:hover 
+{
+    background-color: rgb(34, 82, 62);
+    cursor: pointer;
+}
+.clearCom-btn:hover,.clearAll-btn:hover 
+{
+    background-color: rgb(225, 240, 232);
+    cursor: pointer;
+}
+.src:hover,
+.srcn:hover,
+.dropdownbox:hover 
+{
+    border-color: rgb(47, 107, 82);
+    cursor: pointer;
 }

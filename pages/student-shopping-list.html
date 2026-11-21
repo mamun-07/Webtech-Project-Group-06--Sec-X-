@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel = "stylesheet" href="../css/studentShoppingList.css">
+    <title>Shopping List</title>
+    <link rel = "stylesheet" href="../css/student -shopping-list.css">
 </head>
 <body>
     <div class = "naviBar">
-        <img src="../images/studentLogo.jpeg"/>
+        <img src="../images/logo.png"/>
         <span class = "rbmp">Recipe Book & Meal Planner</span>
         <span class="divider"></span>
-        <span class = "meal"><a href="studentMealPlanner.html">Meal Planner</a></span>
-        <span class = "shoppinglist"><a href="studentShoppingList.html">Shopping List</a></span>
+        <span class = "meal"><a href="student.html">Meal Planner</a></span>
+        <span class = "shoppinglist"><a href="student-shopping-list.html">Shopping List</a></span>
         <span class = "sname"> Student </span>
         <span class="divider1"></span>
-        <span class ="btn-logout"><a href="#">Logout</a></span>   
+        <span class ="btn-logout"><a href="../HomeIndex.html">Logout</a></span>   
     </div>
     <div class = "headAndP">
         <h1>My Shopping List</h1>
@@ -23,20 +23,27 @@
         <p class = "remain">8 items remaining</p>
     </div>
     <div>
-        <div class = "addnew">Add New Ingredient</div>
-        <div class = "addbtm">
-            <input type = "text" class = "src" id = "src" placeholder="Enter ingredient name...">
-            <input type = "number" class = "srcn" id = "srcn" placeholder="Quantity">
-            <select class = "dropdownbox">
-                <option value = "">kg, g, litre, ml, pieces</option>
-                <option value = "kg">Kg</option>
-                <option value = "g">g</option>
-                <option value = "litre">litre</option>
-                <option value = "ml">ml</option>
-                <option value = "pieces">pieces</option>
+    <div class="addnew">Add New Ingredient</div>
+    <form id="ingredientForm">
+        <div class="addbtm">
+            <input type="text" class="src" id="src" placeholder="Enter ingredient name...">
+            <input type="number" class="srcn" id="srcn" placeholder="Quantity">
+            <select class="dropdownbox" id="unit">
+                <option value="">Select unit</option>
+                <option value="kg">Kg</option>
+                <option value="g">g</option>
+                <option value="litre">litre</option>
+                <option value="ml">ml</option>
+                <option value="pieces">pieces</option>
             </select>
-            <button class = "additem-btn">Add Item</button>
+            <button type="submit" class="additem-btn">Add Item</button>
+
+            <span class="error" id="nameError"></span>
+            <span class="error" id="qtyError"></span>
+            <span class="error" id="unitError"></span>
+            <span class="success" id="successMsg"></span>
         </div>
+    </form>
     </div>
     <div class = "shoppinghead">Shopping Checklist</div>
     <div>
@@ -110,7 +117,7 @@
                 </td>
                 <td class="quantity">1 kg</td>
                 <td>X</td>
-            </tr>
+        </tr>
             <tr>
                 <td colspan="3">Total Items: 10 | Purchased: 2 | Remaining: 8</td>
             </tr>
@@ -118,6 +125,7 @@
     </div>
     <button class = "clearCom-btn" id = "clearCom-btn">Clear Completed</button>
     <button class = "clearAll-btn" id = "clearAll-btn">Clear All</button>
-    <button class = "backToMeal-btn" id = "backToMeal-btn">Back to Meal Planner</button>
+    <a class = "backToMeal-btn" id = "backToMeal-btn" href="../pages/student.html">Back to Meal Planner</button>
+    <script src="../js/student-shopping-list.js"></script>
 </body>
 </html>

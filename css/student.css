@@ -178,6 +178,7 @@ img{
     width:373px;
     border-top-left-radius: 10px;
     border-top-right-radius:10px;
+    color:aliceblue;
 
 }
 .reciptionplandiv
@@ -220,11 +221,9 @@ img{
     left: 18px;
     top: 260px;
     font-size:14px;
-    /* font-weight:bold; */
 }
 .day1
 {
-    /* font-weight:bold; */
     width:350px;
     height:34px;
     border-radius:8px;
@@ -255,4 +254,61 @@ img{
     font-size:14px;
     background-color: rgb(47, 107, 82);
     color:white;
+}
+.recipe-item {
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.recipe-item:hover
+{
+    background-color: rgb(225, 240, 232);
+}
+.mealTable
+{
+    border-collapse: collapse;
+    position:relative;
+    left:44px;
+    bottom:920px;
+    width:1045px;
+}
+.mealTable th, .mealTable td
+{
+    text-align: center;
+    border: 1px solid rgb(29, 27, 27);
+    padding: 10px;
+}
+.errormsg {
+    position: absolute;
+    left: 18px;
+    top: 420px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.green-btn:hover 
+{
+    background-color: rgb(34, 82, 62); 
+    cursor: pointer;
+}
+.yellow-btn:hover 
+{
+    background-color: rgb(214, 160, 30);
+    cursor: pointer;
+}
+.clear-outline:hover 
+{
+    background-color: rgb(225, 240, 232);
+    cursor: pointer;
+}
+.btnAdd:hover 
+{
+    background-color: rgb(34, 82, 62);
+    cursor: pointer;
+}
+.search:hover,
+.day1:hover,
+.mealtime1:hover 
+{
+    border-color: rgb(47, 107, 82);
+    cursor:pointer;
 }

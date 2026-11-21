@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/studentMealPlanner.css">
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="../css/student.css">
 </head>
 <body>
     <div class = "naviBar">
-        <img src="../images/studentLogo.jpeg"/>
+        <img src="../images/logo.png"/>
         <span class = "rbmp">Recipe Book & Meal Planner</span>
         <span class="divider"></span>
-        <span class = "meal"><a href="studentMealPlanner.html">Meal Planner</a></span>
-        <span class = "shoppinglist"><a href="studentShoppingList.html">Shopping List</a></span>
+        <span class = "meal"><a href="student.html">Meal Planner</a></span>
+        <span class = "shoppinglist"><a href="student-shopping-list.html">Shopping List</a></span>
         <span class = "sname"> Student </span>
         <span class="divider1"></span>
-        <span class ="btn-logout"><a href="#">Logout</a></span>
+        <span class ="btn-logout"><a href="../HomeIndex.html">Logout</a></span>
         
     </div>
     <div>
@@ -28,38 +28,100 @@
         <button id = "load-btn" class = "yellow-btn">📂 Load Template</button>
         <button id = "clear-btn" class = "clear-outline" type = "reset">🗑 Clear Week</button>
     </div>
+    
     <h2 class = "reciptionhead">Add Recipe to Plan</h2>
-    <div class = "reciptionplandiv">
-        <input type="search" class="search" id="search" placeholder="🔍  Search by recipe or ingredient...">
-        <div class = "option">
+    <div class="reciptionplandiv">
+    <input type="search" class="search" id="search" placeholder="🔍  Search by recipe or ingredient...">
+
+        <div class="option" id="recipeList">
+            <div class="recipe-item">Chicken Pasta</div>
+            <div class="recipe-item">Vegetable Salad</div>
+            <div class="recipe-item">Pancakes</div>
+            <div class="recipe-item">Fish Curry</div>
+            <div class="recipe-item">Chicken Sandwich</div>
+            <div class="recipe-item">Vegetable Soup</div>
         </div>
-        <div class = "day">
-            <label for = "day">Day</label>
+
+        <div class="day">
+            <label for="day">Day</label>
             <br>
-            <select class = day1>
-                <option value = "">Select a day</option>
-                <option value = "Saturday">Saturday</option>
-                <option value = "Sunday">Sunday</option>
-                <option value = "Monday">Monday</option>
-                <option value = "Tuesday">Tuesday</option>
-                <option value = "Wednesday">Wednesday</option>
-                <option value = "Thursday">Thursday</option>
-                <option value = "Friday">Friday</option>
+            <select class="day1" id="day">
+                <option value="">Select a day</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
             </select>
         </div>
 
-        <div class = "mealtime">
-            <label for = "mealtime">Meal</label>
+        <div class="mealtime">
+            <label for="mealtime">Meal</label>
             <br>
-            <select class = mealtime1>
-                <option value = "">Select a meal</option>
-                <option value = "Breakfast">Breakfast</option>
-                <option value = "lunch">lunch</option>
-                <option value = "Dinner">Dinner</option>
+            <select class="mealtime1" id="mealtime">
+                <option value="">Select a meal</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
             </select>
         </div>
-        <button type = "submit" class = "btnAdd">+Add to Meal Plan</button>
 
+        <button type="button" class="btnAdd" id="btnAdd">+Add to Meal Plan</button>
+        <span class="errormsg" id="errormsg"></span>
+        </div>
+    <div>
+        <table class = "mealTable">
+            <tr><th>Day</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Dinner</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Oatmeal X</td>
+                <td>Rice & Chicken X</td>
+                <td>Vegetable Soup X</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Pancakes X</td>
+                <td>Fish Curry X</td>
+                <td>Pasta X</td>
+            </tr> 
+            <tr>
+                <td>Wednesday</td>
+                <td>Bread & Eggs X</td>
+                <td>Rice& Vegetables X</td>
+                <td>Chicken Salad X</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Oatmeal X</td>
+                <td>Beef Curry X</td>
+                <td>Vegetable soup X</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Sandwich X</td>
+                <td>Fried Rice X</td>
+                <td>Grilled Chicken X</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Pancakes X</td>
+                <td>Fried Rice X</td>
+                <td>Pasta X</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Eggs & Toast X</td>
+                <td>Chicken Curry X</td>
+                <td>Salad X</td>
+            </tr>
+        </table>
     </div>
+    <script src="../js/student.js"></script>
 </body>
 </html>

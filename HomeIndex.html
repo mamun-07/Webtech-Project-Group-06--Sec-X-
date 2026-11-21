@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Log in | Recipe Book &  Meal Planner</title>
-  
+  <title>Log in | Recipe Book & Meal Planner</title>
   <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
@@ -12,47 +11,40 @@
     <div class="form">
       <div class="brand">
         <img src="images/logo.png" alt="" width="56">
-        <span class="brandName">Recipe Book &Meal Planner</span>
+        <h3> | Recipe Book & Meal Planner</h3>
       </div>
 
       <h2 style="text-align: center;">Welcome back</h2>
-      <p style="color: #5B6B64; text-align: center;">Sign in to continue to your meal planning dashboard.</p>
+      <p style="color: #5B6B64; text-align: center;">
+        Sign in to continue to your meal planning dashboard.
+      </p>
 
       <form id="loginForm">
         <div class="field">
-          <label for="username">Username</label>
-
-          <div class="input">
-            <span>👤</span>
-            <input type="text" id="username" placeholder="Enter your username" >
+          <label for="username" ><b>Username</b></label>
+          <div class="input" id="usernameBox">
+            👤 <input type="text" id="username" placeholder="Enter your username" >
           </div>
-
-          <p class="field-error" id="usernameError" role="alert"></p>
+          <p class="fieldError" id="usernameError" role="alert" ></p><br>
         </div>
 
         <div class="field">
-          <label for="password">Password</label>
-
-          <div class="input">
-            <span>🔒</span>
-            <input type="password" id="password" placeholder="Enter your password">
-            <button type="button" id="eye" class="eye" >
-              <span>🔍</span>
-            </button>
+          <label for="password"><b>Password</b></label>
+          <div class="input" id="passwordBox"> 
+            🔒 <input type="password" id="password" placeholder="Enter your password" >
+            <button type="button" id="eye" class="eye">🔍</button>
           </div>
-
-          <p class="field-error" id="passwordError" role="alert"></p>
+          <p class="fieldError" id="passwordError" role="alert"></p>
         </div>
 
         <div class="row">
           <label class="check">
-            <input type="checkbox" id="remember">Remember me
+            <input type="checkbox" id="remember"> Remember me
           </label>
           <a href="#" id="forgotLink">Forgot password?</a>
         </div>
 
         <p id="notice" class="notice" hidden></p>
-
         <button type="submit" class="btn">Log in</button>
       </form>
 
@@ -62,14 +54,12 @@
 
       <div class="demo">
         <strong>Accounts</strong>
-
         <div class="chips">
           <button type="button" data-user="admin" data-pass="admin123">admin</button>
           <button type="button" data-user="cook" data-pass="cook123">cook</button>
           <button type="button" data-user="health" data-pass="health123">health</button>
           <button type="button" data-user="student" data-pass="student123">student</button>
         </div>
-
         <small>Click a name to fill in the login.</small>
       </div>
     </div>
