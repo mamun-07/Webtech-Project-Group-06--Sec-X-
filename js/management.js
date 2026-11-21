@@ -16,7 +16,7 @@ toast.addEventListener("click", function ()
 
 function filterUsers()
 {
-    var rows = document.querySelectorAll(".userRow");
+    var rows = document.querySelectorAll(".user");
 
     rows.forEach(function (row)
     {
@@ -46,12 +46,12 @@ searchInput.addEventListener("input", filterUsers);
 roleFilter.addEventListener("change", filterUsers);
 statusFilter.addEventListener("change", filterUsers);
 
-document.querySelectorAll(".userAction").forEach(function (button)
+document.querySelectorAll("#userManagement button").forEach(function (button)
 {
     button.addEventListener("click", function ()
     {
         var row = button.parentElement.parentElement;
-        var status = row.children[3].querySelector(".status");
+        var status = row.children[3].querySelector(".active, .suspended");
         var action = button.textContent.trim();
 
         if (action === "Delete")
@@ -62,17 +62,17 @@ document.querySelectorAll(".userAction").forEach(function (button)
         else if (action === "Suspend")
         {
             status.textContent = "Suspended";
-            status.className = "status suspendedStatus";
+            status.className = "suspended";
             button.textContent = "Activate";
-            button.className = "actionButton activateButton userAction";
+            button.className = "activate";
             showToast("User suspended in this demo.");
         }
         else
         {
             status.textContent = "Active";
-            status.className = "status activeStatus";
+            status.className = "active";
             button.textContent = "Suspend";
-            button.className = "actionButton suspendButton userAction";
+            button.className = "suspend";
             showToast("User activated in this demo.");
         }
 
@@ -80,7 +80,7 @@ document.querySelectorAll(".userAction").forEach(function (button)
     });
 });
 
-document.querySelectorAll(".approvalAction").forEach(function (button)
+document.querySelectorAll("#accountApprovals button").forEach(function (button)
 {
     button.addEventListener("click", function ()
     {
@@ -90,7 +90,7 @@ document.querySelectorAll(".approvalAction").forEach(function (button)
     });
 });
 
-document.querySelectorAll(".recipeAction").forEach(function (button)
+document.querySelectorAll("#recipeModeration button").forEach(function (button)
 {
     button.addEventListener("click", function ()
     {

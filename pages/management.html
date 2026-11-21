@@ -3,50 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Management Panel | Recipe Book & Meal Planner</title>
+  <title>Management Panel | Recipe Book &  Meal Planner</title>
   <link rel="stylesheet" href="../css/management.css">
 </head>
 <body>
   <div class="topbar">
-    <div class="topbarInner">
+    <div class="inner">
       <a class="brand" href="admin.html">
-        <img src="../images/logo.png" alt="Recipe Book & Meal Planner logo">
-        <span>Recipe Book & Meal Planner</span>
+        <img src="../images/logo.png" alt="logo"> Recipe Book &  Meal Planner
       </a>
 
       <div class="links">
-        <a class="link" href="admin.html">Dashboard</a>
-        <a class="link active" href="management.html">Management</a>
+        <a href="admin.html">Dashboard</a>
+        <a class="selected" href="management.html">Management</a>
       </div>
 
-      <div class="accountArea">
-        <span class="adminName">Admin</span>
-        <span class="accountIcon">
-          <span class="iconEmoji">👤</span>
+      <div class="account">
+        <span class="name">Admin</span>
+        <span class="icon">
+          <span class="emoji">👤</span>
         </span>
-        <a class="logoutButton" href="../HomeIndex.html">Logout</a>
+        <a class="logout" href="../HomeIndex.html">Logout</a>
       </div>
     </div>
   </div>
 
-  <div class="pageWrap">
-    <div class="pageHeading">
-      <div>
-        <h1>Management Panel</h1>
-        <p>Manage users, review account requests, and moderate recipes.</p>
-      </div>
+  <div class="page">
+    <div class="intro">
+      <h1>Management Panel</h1>
+      <p>Manage users, review account requests, and moderate recipes.</p>
     </div>
 
-    <div class="panel" id="userManagement">
-      <div class="panelHeading">
+    <div class="users" id="userManagement">
+      <div class="heading">
         <h2>User Management</h2>
       </div>
 
-      <div class="filterRow">
-        <div class="searchBox">
-          <span class="searchIcon" aria-hidden="true">🔍</span>
-          <input id="userSearch" type="text" placeholder="Search users by name or email" ria-label="Search users by name or email"
-          >
+      <div class="filters">
+        <div class="search">
+          <span class="glass" aria-hidden="true">🔍</span>
+          <input id="userSearch" type="text" placeholder="Search users by name or email">
         </div>
 
         <select id="roleFilter" aria-label="Filter users by role">
@@ -64,56 +60,59 @@
         </select>
       </div>
 
-      <div class="tableWrap">
-        <table class="managementTable">
+      <div class="tablewrap">
+        <table class="table">
           <thead>
             <tr>
-              <th class="userNameCol">User Name</th>
-              <th class="userEmailCol">Email</th>
-              <th class="userRoleCol">Role</th>
-              <th class="userStatusCol">Status</th>
-              <th class="userActionCol">Action</th>
+              <th>User Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="userRow">
+            <tr class="user">
               <td>Farabi</td>
               <td>farabi@gmail.com</td>
               <td>Student</td>
-              <td><span class="status activeStatus">Active</span></td>
+              <td><span class="active">Active</span></td>
               <td>
-                <button class="actionButton suspendButton userAction" type="button">Suspend</button>
-                <button class="actionButton deleteButton userAction" type="button">Delete</button>
+                <button class="suspend" type="button">Suspend</button>
+                <button class="delete" type="button">Delete</button>
               </td>
             </tr>
-            <tr class="userRow">
+
+            <tr class="user">
               <td>Sara</td>
               <td>sara@gmail.com</td>
               <td>Student</td>
-              <td><span class="status activeStatus">Active</span></td>
+              <td><span class="active">Active</span></td>
               <td>
-                <button class="actionButton suspendButton userAction" type="button">Suspend</button>
-                <button class="actionButton deleteButton userAction" type="button">Delete</button>
+                <button class="suspend" type="button">Suspend</button>
+                <button class="delete" type="button">Delete</button>
               </td>
             </tr>
-            <tr class="userRow">
+
+            <tr class="user">
               <td>Moinul</td>
               <td>moinul@gmail.com</td>
               <td>Health-Conscious User</td>
-              <td><span class="status suspendedStatus">Suspended</span></td>
+              <td><span class="suspended">Suspended</span></td>
               <td>
-                <button class="actionButton activateButton userAction" type="button">Activate</button>
-                <button class="actionButton deleteButton userAction" type="button">Delete</button>
+                <button class="activate" type="button">Activate</button>
+                <button class="delete" type="button">Delete</button>
               </td>
             </tr>
-            <tr class="userRow">
+
+            <tr class="user">
               <td>Arafat</td>
               <td>arafat@gmail.com</td>
               <td>Home Cooking Enthusiast</td>
-              <td><span class="status activeStatus">Active</span></td>
+              <td><span class="active">Active</span></td>
               <td>
-                <button class="actionButton suspendButton userAction" type="button">Suspend</button>
-                <button class="actionButton deleteButton userAction" type="button">Delete</button>
+                <button class="suspend" type="button">Suspend</button>
+                <button class="delete" type="button">Delete</button>
               </td>
             </tr>
           </tbody>
@@ -121,65 +120,67 @@
       </div>
     </div>
 
-    <div class="panel" id="accountApprovals">
-      <div class="panelHeading">
+    <div class="approvals" id="accountApprovals">
+      <div class="heading">
         <h2>Pending Account Approvals</h2>
       </div>
 
-      <div class="requestList">
-        <div class="requestRow">
+      <div class="requests">
+        <div class="request">
           <span>Jadid</span>
           <span>jadid@gmail.com</span>
           <span>Student</span>
-          <div class="requestActions">
-            <button class="actionButton approveButton approvalAction" type="button">Approve</button>
-            <button class="actionButton deleteButton approvalAction" type="button">Reject</button>
+          <div class="actions">
+            <button class="approve" type="button">Approve</button>
+            <button class="reject" type="button">Reject</button>
           </div>
         </div>
-        <div class="requestRow">
+
+        <div class="request">
           <span>Nafisa</span>
           <span>nafisa@gmail.com</span>
           <span>Cook</span>
-          <div class="requestActions">
-            <button class="actionButton approveButton approvalAction" type="button">Approve</button>
-            <button class="actionButton deleteButton approvalAction" type="button">Reject</button>
+          <div class="actions">
+            <button class="approve" type="button">Approve</button>
+            <button class="reject" type="button">Reject</button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="panel recipePanel" id="recipeModeration">
-      <div class="panelHeading">
+    <div class="recipes" id="recipeModeration">
+      <div class="heading">
         <h2>Recipe Moderation</h2>
       </div>
 
-      <div class="tableWrap">
-        <table class="managementTable">
+      <div class="tablewrap">
+        <table class="table">
           <thead>
             <tr>
-              <th class="recipeNameCol">Recipe Name</th>
-              <th class="recipeAuthorCol">Submitted By</th>
-              <th class="recipeCategoryCol">Category</th>
-              <th class="recipeActionCol">Action</th>
+              <th>Recipe Name</th>
+              <th>Submitted By</th>
+              <th>Category</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="recipeRow">
+            <tr class="recipe">
               <td>Chicken Pasta</td>
               <td>Sara</td>
               <td>Lunch</td>
               <td>
-                <button class="actionButton viewButton recipeAction" type="button">View</button>
-                <button class="actionButton deleteButton recipeAction" type="button">Remove</button>
+                <button class="view" type="button">View</button>
+                <button class="remove" type="button">Remove</button>
               </td>
             </tr>
-            <tr class="recipeRow">
+
+            <tr class="recipe">
               <td>Vegetable Soup</td>
               <td>Arafat</td>
               <td>Dinner</td>
               <td>
-                <button class="actionButton viewButton recipeAction" type="button">View</button>
-                <button class="actionButton deleteButton recipeAction" type="button">Remove</button>
+                <button class="view" type="button">View</button>
+                <button class="remove" type="button">Remove</button>
               </td>
             </tr>
           </tbody>
@@ -189,6 +190,7 @@
   </div>
 
   <div class="toast" id="toast"></div>
+
   <script src="../js/management.js"></script>
 </body>
 </html>

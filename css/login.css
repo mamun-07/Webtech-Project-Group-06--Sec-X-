@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,7 +8,6 @@ body {
   background-color: #FBFBF7;
   line-height: 1.5;
 }
-
 .split {
   min-height: 100vh;
   display: flex;
@@ -18,7 +16,6 @@ body {
   padding: 24px;
   background-color: #E4EBE5;
 }
-
 .form {
   width: 100%;
   max-width: 520px;
@@ -26,7 +23,6 @@ body {
   background-color: white;
   border-radius: 12px;
 }
-
 .brand {
   display: flex;
   align-items: center;
@@ -35,30 +31,20 @@ body {
   margin-bottom: 20px;
   color: #3c9b7b;
 }
-
 .brandName {
   padding-left: 12px;
   border-left: 2px solid currentColor;
   font-size: 20px;
   font-weight: bold;
 }
-
-.sub {
-  margin: 8px 0 25px;
-  color: #5B6B64;
-  text-align: center;
-}
-
 .field {
   margin-bottom: 15px;
 }
-
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
-
 .input {
   display: flex;
   align-items: center;
@@ -68,15 +54,12 @@ label {
   border: 1px solid #CFD6D1;
   border-radius: 8px;
 }
-
 .input:focus-within {
   border-color: #2F5D50;
 }
-
 .input.invalid {
   border-color: #C8402F;
 }
-
 .input input {
   flex: 1;
   min-width: 0;
@@ -84,46 +67,38 @@ label {
   border: none;
   background: transparent;
 }
-
 .input input:focus-visible {
   outline: none;
 }
-
 .eye {
   padding: 0;
   border: 0;
   background: transparent;
 }
-
-.field-error {
+.fieldError {
   margin: 5px 0 0;
   color: #C8402F;
 }
-
-.field-error:empty {
+.fieldError:empty {
   display: none;
 }
-
 .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 15px 0;
 }
-
 .check {
   display: flex;
   align-items: center;
   gap: 5px;
   font-weight: normal;
 }
-
 .notice {
   margin: 0 0 15px;
   padding: 10px;
   background-color: #E4EBE5;
 }
-
 .btn {
   width: 100%;
   padding: 14px;
@@ -133,22 +108,18 @@ label {
   font-weight: bold;
   cursor: pointer;
 }
-
 .btn:hover {
   background-color: #E8A91C;
 }
-
 .alt {
   text-align: center;
 }
-
 .demo {
   padding: 14px;
   background-color: #E4EBE5;
   border-radius: 10px;
   text-align: center;
 }
-
 .chips {
   display: flex;
   justify-content: center;
@@ -156,7 +127,6 @@ label {
   gap: 8px;
   margin: 10px;
 }
-
 .chips button {
   padding: 6px 14px;
   background-color: white;

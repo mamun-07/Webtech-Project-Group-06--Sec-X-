@@ -20,17 +20,15 @@ function clearMessages()
     passwordError.textContent = "";
     notice.textContent = "";
     notice.hidden = true;
-
     usernameInput.parentElement.classList.remove("invalid");
     passwordInput.parentElement.classList.remove("invalid");
 }
 
+var savedUsername = localStorage.getItem("rememberedUser");
 
-var Username = localStorage.getItem("rememberedUser");
-
-if (Username)
+if (savedUsername)
 {
-    usernameInput.value = Username;
+    usernameInput.value = savedUsername;
     remember.checked = true;
 }
 
@@ -55,7 +53,6 @@ for (var i = 0; i < demoButtons.length; i++)
     demoButtons[i].addEventListener("click", function ()
     {
         clearMessages();
-
         usernameInput.value = this.getAttribute("data-user");
         passwordInput.value = this.getAttribute("data-pass");
     });
@@ -102,6 +99,15 @@ loginForm.addEventListener("submit", function (event)
         passwordError.textContent = "Username or password is incorrect.";
         passwordInput.parentElement.classList.add("invalid");
         return;
+    }
+
+    if (remember.checked)
+    {
+        localStorage.setItem("rememberedUser", username);
+    }
+    else
+    {
+        localStorage.removeItem("rememberedUser");
     }
 
     window.location.href = user.page;
