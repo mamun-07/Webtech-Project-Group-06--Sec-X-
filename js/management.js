@@ -3,92 +3,107 @@ var searchInput = document.getElementById("userSearch");
 var roleFilter = document.getElementById("roleFilter");
 var statusFilter = document.getElementById("statusFilter");
 
-function showToast(message) {
-  if (toast) {
+function showToast(message)
+{
     toast.textContent = message;
     toast.style.display = "block";
-  }
 }
 
-if (toast) {
-  toast.addEventListener("click", function () {
+toast.addEventListener("click", function ()
+{
     toast.style.display = "none";
-  });
-}
+});
 
-function filterUsers() {
-  var rows = document.querySelectorAll(".user-row");
-  var searchText = searchInput.value.toLowerCase();
-  var selectedRole = roleFilter.value;
-  var selectedStatus = statusFilter.value;
+function filterUsers()
+{
+    var rows = document.querySelectorAll(".userRow");
 
-  rows.forEach(function (row) {
-    var userName = row.children[0].textContent.toLowerCase();
-    var email = row.children[1].textContent.toLowerCase();
-    var role = row.children[2].textContent;
-    var status = row.children[3].textContent.trim();
-    var matchesSearch = userName.includes(searchText) || email.includes(searchText);
-    var matchesRole = selectedRole === "All Roles" || role === selectedRole;
-    var matchesStatus = selectedStatus === "All Status" || status === selectedStatus;
+    rows.forEach(function (row)
+    {
+        var name = row.children[0].textContent.toLowerCase();
+        var email = row.children[1].textContent.toLowerCase();
+        var role = row.children[2].textContent.trim();
+        var status = row.children[3].textContent.trim();
 
-    if (matchesSearch && matchesRole && matchesStatus) {
-      row.style.display = "";
-    } else {
-      row.style.display = "none";
-    }
-  });
+        var matchesSearch =
+            name.includes(searchInput.value.toLowerCase()) ||
+            email.includes(searchInput.value.toLowerCase());
+
+        var matchesRole =
+            roleFilter.value === "All Roles" ||
+            role === roleFilter.value;
+
+        var matchesStatus =
+            statusFilter.value === "All Status" ||
+            status === statusFilter.value;
+
+        row.style.display =
+            matchesSearch && matchesRole && matchesStatus ? "" : "none";
+    });
 }
 
 searchInput.addEventListener("input", filterUsers);
 roleFilter.addEventListener("change", filterUsers);
 statusFilter.addEventListener("change", filterUsers);
 
-document.querySelectorAll(".user-action").forEach(function (button) {
-  button.addEventListener("click", function () {
-    var row = button.parentElement.parentElement;
-    var status = row.children[3].querySelector(".status");
-    var action = button.textContent.trim();
+document.querySelectorAll(".userAction").forEach(function (button)
+{
+    button.addEventListener("click", function ()
+    {
+        var row = button.parentElement.parentElement;
+        var status = row.children[3].querySelector(".status");
+        var action = button.textContent.trim();
 
-    if (action === "Suspend") {
-      status.textContent = "Suspended";
-      status.className = "status suspended-status";
-      button.textContent = "Activate";
-      button.className = "action-button activate-button user-action";
-      showToast("User suspended in this demo.");
-    } else if (action === "Activate") {
-      status.textContent = "Active";
-      status.className = "status active-status";
-      button.textContent = "Suspend";
-      button.className = "action-button suspend-button user-action";
-      showToast("User activated in this demo.");
-    } else if (action === "Delete") {
-      row.parentElement.removeChild(row);
-      showToast("User removed from this demo.");
-    }
+        if (action === "Delete")
+        {
+            row.remove();
+            showToast("User removed from this demo.");
+        }
+        else if (action === "Suspend")
+        {
+            status.textContent = "Suspended";
+            status.className = "status suspendedStatus";
+            button.textContent = "Activate";
+            button.className = "actionButton activateButton userAction";
+            showToast("User suspended in this demo.");
+        }
+        else
+        {
+            status.textContent = "Active";
+            status.className = "status activeStatus";
+            button.textContent = "Suspend";
+            button.className = "actionButton suspendButton userAction";
+            showToast("User activated in this demo.");
+        }
 
-    filterUsers();
-  });
+        filterUsers();
+    });
 });
 
-document.querySelectorAll(".approval-action").forEach(function (button) {
-  button.addEventListener("click", function () {
-    var row = button.parentElement.parentElement;
-    var action = button.textContent.trim();
-    row.parentElement.removeChild(row);
-    showToast(action + " completed in this demo.");
-  });
+document.querySelectorAll(".approvalAction").forEach(function (button)
+{
+    button.addEventListener("click", function ()
+    {
+        var action = button.textContent.trim();
+        button.parentElement.parentElement.remove();
+        showToast(action + " completed in this demo.");
+    });
 });
 
-document.querySelectorAll(".recipe-action").forEach(function (button) {
-  button.addEventListener("click", function () {
-    var row = button.parentElement.parentElement;
-    var action = button.textContent.trim();
+document.querySelectorAll(".recipeAction").forEach(function (button)
+{
+    button.addEventListener("click", function ()
+    {
+        var row = button.parentElement.parentElement;
 
-    if (action === "View") {
-      showToast("Recipe: " + row.children[0].textContent);
-    } else {
-      row.parentElement.removeChild(row);
-      showToast("Recipe removed from this demo.");
-    }
-  });
+        if (button.textContent.trim() === "View")
+        {
+            showToast("Recipe: " + row.children[0].textContent);
+        }
+        else
+        {
+            row.remove();
+            showToast("Recipe removed from this demo.");
+        }
+    });
 });
