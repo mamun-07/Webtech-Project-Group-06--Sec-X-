@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // default goals
+=======
+
+>>>>>>> 30247a92e2cad3d91ef532989006ed4e9477bd6b
 var calories = document.getElementById("calories");
 var protein = document.getElementById("protein");
 var carbs = document.getElementById("carbs");
@@ -75,4 +79,8 @@ document.getElementById("saveBtn").addEventListener("click", function () {
 document.getElementById("resetBtn").addEventListener("click", function () {
   showGoals(2000, 100, 250, 70, ["Vegetarian", "Low-Carb"]);
   message.textContent = "";
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 30247a92e2cad3d91ef532989006ed4e9477bd6b

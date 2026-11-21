@@ -1,10 +1,380 @@
+<<<<<<< HEAD
 /* Health pages: health-dashboard.html and health-goals.html */
 
 /* --------- ---------- */
+=======
+
+>>>>>>> 30247a92e2cad3d91ef532989006ed4e9477bd6b
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
+=======
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fbfaf7;
+  color: #1f3a4d;
+}
+
+/* ---------- top bar ---------- */
+.topbar {
+  background: #fff;
+  border-bottom: 1px solid #d8ded9;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2f5d50;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  padding-left: 20px;
+  border-left: 2px solid #c8cfca;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #22302b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background: #2f5d50;
+  color: #fff;
+  border-bottom: 4px solid #f6b72e;
+}
+
+.account-area {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-name {
+  color: #2f5d50;
+  font-weight: bold;
+}
+
+.account-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: #2f5d50;
+}
+
+.logout-button {
+  background: #f6b72e;
+  color: #22302b;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ---------- page ---------- */
+.page-wrap {
+  padding: 12px 30px;
+}
+
+.page-heading {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.page-heading h1 {
+  color: #1a5038;
+  font-size: 26px;
+}
+
+.page-heading p {
+  margin-top: 2px;
+  font-size: 15px;
+}
+
+.today-date {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  font-size: 15px;
+}
+
+/* ---------- boxes with green title ---------- */
+.panel {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.panel-heading {
+  background: #3a7358;
+  color: #fff;
+  padding: 7px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-heading h2 {
+  font-size: 17px;
+}
+
+.panel-heading select {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.panel-body {
+  padding: 10px;
+}
+
+/* ---------- 4 cards ---------- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h2 {
+  font-size: 15px;
+}
+
+.stat-number {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 2px 0 6px;
+}
+
+.stat-number small {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.bar {
+  background: #e6e6e6;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  background: #f6b72e;
+  height: 100%;
+  width: 0;
+}
+
+.stat-note {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+/* ---------- meals table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  text-align: left;
+  padding: 4px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #f4f4f4;
+}
+
+.total-row {
+  font-weight: bold;
+  background: #f0f0f0;
+}
+
+/* ---------- recipe cards ---------- */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.recipe-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.recipe-img {
+  background: #fcf1d8;
+  font-size: 28px;
+  padding: 2px;
+}
+
+.recipe-card h3 {
+  margin: 4px 0 2px;
+  font-size: 16px;
+}
+
+.recipe-card p {
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.view-button {
+  display: inline-block;
+  width: 90%;
+  background: #2f5d50;
+  color: #fff;
+  padding: 6px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ---------- goals page ---------- */
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.goal label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.goal input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 17px;
+}
+
+.diet-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.diet {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.diet input {
+  width: 18px;
+  height: 18px;
+}
+
+.diet.checked {
+  border-color: #2f5d50;
+  background: #eef5f0;
+}
+
+.button-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.save-button {
+  background: #2f5d50;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reset-button {
+  background: #fff;
+  color: #1a5038;
+  border: 1px solid #2f5d50;
+  padding: 12px 36px;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.message {
+  color: #2e7d46;
+  font-size: 16px;
+}
+
+.message.error {
+  color: #b3261e;
+}
+
+/* ---------- small screen ---------- */
+@media (max-width: 800px) {
+  .topbar-inner {
+    flex-wrap: wrap;
+  }
+
+  .stats-grid,
+  .goal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .today-date {
+    position: static;
+    margin-bottom: 6px;
+  }
+>>>>>>> 30247a92e2cad3d91ef532989006ed4e9477bd6b
 }
 
 body {
