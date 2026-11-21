@@ -23,20 +23,27 @@
         <p class = "remain">8 items remaining</p>
     </div>
     <div>
-        <div class = "addnew">Add New Ingredient</div>
-        <div class = "addbtm">
-            <input type = "text" class = "src" id = "src" placeholder="Enter ingredient name...">
-            <input type = "number" class = "srcn" id = "srcn" placeholder="Quantity">
-            <select class = "dropdownbox">
-                <option value = "">kg, g, litre, ml, pieces</option>
-                <option value = "kg">Kg</option>
-                <option value = "g">g</option>
-                <option value = "litre">litre</option>
-                <option value = "ml">ml</option>
-                <option value = "pieces">pieces</option>
+    <div class="addnew">Add New Ingredient</div>
+    <form id="ingredientForm">
+        <div class="addbtm">
+            <input type="text" class="src" id="src" placeholder="Enter ingredient name...">
+            <input type="number" class="srcn" id="srcn" placeholder="Quantity">
+            <select class="dropdownbox" id="unit">
+                <option value="">Select unit</option>
+                <option value="kg">Kg</option>
+                <option value="g">g</option>
+                <option value="litre">litre</option>
+                <option value="ml">ml</option>
+                <option value="pieces">pieces</option>
             </select>
-            <button class = "additem-btn">Add Item</button>
+            <button type="submit" class="additem-btn">Add Item</button>
+
+            <span class="error" id="nameError"></span>
+            <span class="error" id="qtyError"></span>
+            <span class="error" id="unitError"></span>
+            <span class="success" id="successMsg"></span>
         </div>
+    </form>
     </div>
     <div class = "shoppinghead">Shopping Checklist</div>
     <div>
@@ -119,5 +126,6 @@
     <button class = "clearCom-btn" id = "clearCom-btn">Clear Completed</button>
     <button class = "clearAll-btn" id = "clearAll-btn">Clear All</button>
     <button class = "backToMeal-btn" id = "backToMeal-btn">Back to Meal Planner</button>
+    <script src="../js/student-shopping-list.js"></script>
 </body>
 </html>
