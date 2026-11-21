@@ -178,6 +178,7 @@ img{
     width:373px;
     border-top-left-radius: 10px;
     border-top-right-radius:10px;
+    color:aliceblue;
 
 }
 .reciptionplandiv
@@ -220,11 +221,9 @@ img{
     left: 18px;
     top: 260px;
     font-size:14px;
-    /* font-weight:bold; */
 }
 .day1
 {
-    /* font-weight:bold; */
     width:350px;
     height:34px;
     border-radius:8px;
@@ -264,4 +263,25 @@ img{
 .recipe-item:hover
 {
     background-color: rgb(225, 240, 232);
+}
+.mealTable
+{
+    border-collapse: collapse;
+    position:relative;
+    left:44px;
+    bottom:920px;
+    width:1045px;
+}
+.mealTable th, .mealTable td
+{
+    text-align: center;
+    border: 1px solid rgb(29, 27, 27);
+    padding: 10px;
+}
+.errormsg {
+    position: absolute;
+    left: 18px;
+    top: 420px;
+    font-size: 13px;
+    font-weight: bold;
 }
