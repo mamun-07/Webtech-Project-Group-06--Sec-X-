@@ -30,12 +30,10 @@ document.getElementById("eye").addEventListener("click", function ()
     if (passwordInput.type === "password")
     {
         passwordInput.type = "text";
-        this.setAttribute("aria-label", "Hide password");
     }
     else
     {
         passwordInput.type = "password";
-        this.setAttribute("aria-label", "Show password");
     }
 });
 
@@ -50,12 +48,6 @@ for (var i = 0; i < demoButtons.length; i++)
         passwordInput.value = this.getAttribute("data-pass");
     });
 }
-
-document.getElementById("forgotLink").addEventListener("click", function (event)
-{
-    event.preventDefault();
-    alert("Password reset feature is not available yet.");
-});
 
 loginForm.addEventListener("submit", function (event)
 {
@@ -93,15 +85,6 @@ loginForm.addEventListener("submit", function (event)
         passwordBox.classList.add("invalid");
         return;
     }
-
-    if (remember.checked)
-    {
-        localStorage.setItem("rememberedUser", username);
-    }
-    else
-    {
-        localStorage.removeItem("rememberedUser");
-    }
-
+    
     window.location.href = user.page;
 });
