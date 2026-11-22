@@ -30,12 +30,10 @@ document.getElementById("eye").addEventListener("click", function ()
     if (passwordInput.type === "password")
     {
         passwordInput.type = "text";
-        this.setAttribute("aria-label", "Hide password");
     }
     else
     {
         passwordInput.type = "password";
-        this.setAttribute("aria-label", "Show password");
     }
 });
 

@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-/* Health pages: health-dashboard.html and health-goals.html */
-
-/* --------- ---------- */
-=======
-
->>>>>>> 30247a92e2cad3d91ef532989006ed4e9477bd6b
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-=======
 }
 
 body {
@@ -374,7 +365,6 @@ th {
     position: static;
     margin-bottom: 6px;
   }
->>>>>>> 30247a92e2cad3d91ef532989006ed4e9477bd6b
 }
 
 body {

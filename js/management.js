@@ -25,17 +25,11 @@ function filterUsers()
         var role = row.children[2].textContent.trim();
         var status = row.children[3].textContent.trim();
 
-        var matchesSearch =
-            name.includes(searchInput.value.toLowerCase()) ||
-            email.includes(searchInput.value.toLowerCase());
+        var matchesSearch = name.includes(searchInput.value.toLowerCase()) ||  email.includes(searchInput.value.toLowerCase());
 
-        var matchesRole =
-            roleFilter.value === "All Roles" ||
-            role === roleFilter.value;
+        var matchesRole =  roleFilter.value === "All Roles" || role === roleFilter.value;
 
-        var matchesStatus =
-            statusFilter.value === "All Status" ||
-            status === statusFilter.value;
+        var matchesStatus = statusFilter.value === "All Status" || status === statusFilter.value;
 
         row.style.display =
             matchesSearch && matchesRole && matchesStatus ? "" : "none";
